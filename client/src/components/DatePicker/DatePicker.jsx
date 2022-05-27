@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DatePicker.css";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
@@ -13,36 +13,29 @@ const DatePicker = () => {
   let currentDateTime = Date.now();
   const latitude = 32.0853;
   const longitude = 34.7818;
-  const [value, setValue] = React.useState(new Date(currentDateTime));
+
+  const [value, setValue] = useState(new Date(currentDateTime));
+  const [email, setEmail] = useState(null);
+  const [subject, setSubject] = useState(null);
+  const [body, setBody] = useState(null);
 
   const handleChange = async (newValue) => {
     setValue(newValue);
-
-    const options = {
-      method: "GET",
-      url: "https://meteostat.p.rapidapi.com/stations/hourly",
-      params: {
-        station: "10637",
-        start: "2022-05-26",
-        end: "2022-05-27",
-        tz: "Europe/Berlin",
-      },
-      headers: {
-        "X-RapidAPI-Host": "meteostat.p.rapidapi.com",
-        "X-RapidAPI-Key": "6f9c7db7afmsh9b80a62b2b1ab46p157678jsna766966166a2",
-      },
-    };
-
-    axios
-      .request(options)
-      .then(function (response) {
-        console.log(response.data);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
   };
 
+  const handleClick = async () => {
+    try {
+      const response = await axios.post("http://localhost:5000/api/tasks", {
+        value,
+        email,
+        subject,
+        body,
+      });
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="datePickerContainer">
       <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -55,6 +48,23 @@ const DatePicker = () => {
           />
         </Stack>
       </LocalizationProvider>
+
+      <div>
+        <label>Email</label>
+        <input onChange={(e) => setEmail(e.target.value)} type="email"></input>
+      </div>
+
+      <div>
+        <label>Subject</label>
+        <input onChange={(e) => setSubject(e.target.value)} type="text"></input>
+      </div>
+      <div>
+        <label>Body</label>
+        <textarea onChange={(e) => setBody(e.target.value)}></textarea>
+      </div>
+      <div>
+        <button onClick={handleClick}>Schedule This Task</button>
+      </div>
     </div>
   );
 };
