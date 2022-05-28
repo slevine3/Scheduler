@@ -8,13 +8,14 @@ import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
+
 import axios from "axios";
 const DatePicker = () => {
-  let currentDateTime = Date.now();
+
   const latitude = 32.0853;
   const longitude = 34.7818;
 
-  const [value, setValue] = useState(new Date(currentDateTime));
+  const [value, setValue] = useState(new Date());
   const [email, setEmail] = useState(null);
   const [subject, setSubject] = useState(null);
   const [body, setBody] = useState(null);
@@ -23,6 +24,8 @@ const DatePicker = () => {
     setValue(newValue);
   };
 
+  
+  console.log(value);
   const handleClick = async () => {
     try {
       const response = await axios.post("http://localhost:5000/api/tasks", {
@@ -31,7 +34,7 @@ const DatePicker = () => {
         subject,
         body,
       });
-      console.log(response);
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }

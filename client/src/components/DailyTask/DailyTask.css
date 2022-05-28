@@ -1,0 +1,29 @@
+.emailTime {
+  font-size: 24px;
+}
+.emailItemTitle{
+    font-weight: 600;
+}
+.emailRecipients {
+  font-size: 20px;
+}
+
+.emailSubject {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.emailBody {
+  font-size: 16px;
+
+}
+
+ul {
+  list-style: none;
+}
+
+.deleteIcon{
+  cursor: pointer;
+  margin-bottom: 30px;
+  
+}
