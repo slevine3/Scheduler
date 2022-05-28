@@ -1,6 +1,26 @@
 const Mailer = () => {
   const nodemailer = require("nodemailer");
   let cron = require("node-cron");
+  const moment = require("moment");
+
+  //TASK NOW
+
+  const checkTaskNow = async () => {
+    const now = moment().format();
+    console.log("now: ", now);
+    try {
+      const data = await Task.find({
+        value: {
+          $eq: now,
+        },
+      });
+      console.log('data is called: ', data)
+   
+    } catch (error) {
+
+    }
+  };
+  checkTaskNow();
 
   //MESSAGE OPTIONS
 
