@@ -9,12 +9,11 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 
-const graph = require('./modules/graph')
-// graph()
+
 
 
 const RunTask = require('./modules/RunTask')
-// RunTask()
+RunTask()
 
 
 const taskRoute = require("./routes/tasks");

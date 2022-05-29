@@ -10,14 +10,18 @@ const RunTask = async () => {
   try {
     const data = await Task.find({
       value: {
-        $gte: now,
+        $eq: now,
       },
     });
     if (data.length > 0) {
-      graph() //This calls an api which generates a graph and then sends an email
-      RunTask() //Recursive attempt to call the function for the next task
+      console.log(data);
+      data.map((item) => graph(item));
+
+      setTimeout(() => {
+        RunTask();
+      }, 5000);
     } else {
-      RunTask() // If data array is empty it will call the function until data has value
+      RunTask();
     }
   } catch (error) {
     console.log(error);

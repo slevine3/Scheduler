@@ -2,12 +2,16 @@ const QuickChart = require("quickchart-js");
 const myChart = new QuickChart();
 const axios = require("axios");
 const Mailer = require("./Mailer");
+const moment = require("moment");
 
+const graph = async (item) => {
+  const value = item.value;
+  const date = moment(value).subtract(1, "days").format();
+  const newDate = date.slice(0, 10);
 
-const graph = async () => {
   try {
     const response = await axios.get(
-      `http://api.weatherapi.com/v1/history.json?key=${process.env.WEATHER_API_KEY}&q=tel_aviv&dt=2022-05-25`
+      `http://api.weatherapi.com/v1/history.json?key=${process.env.WEATHER_API_KEY}&q=tel_aviv&dt=${newDate}`
     );
 
     const time = response.data.forecast.forecastday[0].hour.map(
@@ -16,6 +20,8 @@ const graph = async () => {
     const temp = response.data.forecast.forecastday[0].hour.map(
       (item) => item.temp_c
     );
+    console.log(time);
+    console.log(temp);
     myChart
       .setConfig({
         type: "line",
@@ -24,7 +30,8 @@ const graph = async () => {
           datasets: [
             {
               label: "Temperature",
-              data: temp, fill: false,
+              data: temp,
+              fill: false,
             },
           ],
         },
@@ -36,9 +43,10 @@ const graph = async () => {
     const chartImageUrl = myChart.getUrl();
     const message = chartImageUrl;
 
-    Mailer(message);
+    Mailer(message, item);
   } catch (error) {
     console.log(error);
   }
 };
+
 module.exports = graph;

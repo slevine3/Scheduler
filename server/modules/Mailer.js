@@ -1,13 +1,13 @@
-const Mailer = (message) => {
+const Mailer = (message, item) => {
   const nodemailer = require("nodemailer");
 
   //MESSAGE OPTIONS
 
   let mailOptions = {
     from: "levinesam3@gmail.com",
-    to: "levinesam3@gmail.com",
-    subject: "Email from Node-App: A Test Message!",
-    text: "Please see the attachment for the latest 24 hour weather temperatures",
+    to: item.email,
+    subject: item.subject,
+    text: item.body + ". Additionally, please see the attachment for yesterday's 24 hour weather temperatures",
     attachments: [
       {
         filename: "weather.jpg",
