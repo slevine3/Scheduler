@@ -4,21 +4,14 @@ const moment = require("moment");
 
 //CREATE
 router.post("/", async (req, res) => {
-  const value = req.body.value;
+  const wrongValue = req.body.value;
   const email = req.body.email;
   const subject = req.body.subject;
   const body = req.body.body;
 
   //CORRECT NODE TIMESTAMP ISSUE +3hrs
-  
-  // const addHours = (numOfHours, date = wrongValue) => {
-  //   date.setTime(date.getTime() + numOfHours * 60 * 60 * 1000);
-
-  //   return date;
-  // };
-
-  // const value = addHours(3);
-  // console.log("value", value);
+  let israelTimezone = moment.tz(wrongValue, "Asia/Jerusalem");
+  let value = israelTimezone.format();
 
   const newTask = new Task({ value, email, subject, body });
 
@@ -42,6 +35,7 @@ router.get("/daily", async (req, res) => {
 
   try {
     const data = await Task.find({
+  
       value: {
         $gte: start,
         $lt: end,
@@ -49,6 +43,37 @@ router.get("/daily", async (req, res) => {
     });
 
     res.status(200).json(data);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+//UPDATE
+
+router.put("/update", async (req, res) => {
+  const id = req.body.id;
+  try {
+    const updateTask = await Task.findByIdAndUpdate(
+      id,
+      {
+        $set: req.body,
+      },
+      { new: true }
+    );
+    res.status(200).json(updateTask);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+//DELETE
+
+router.delete("/delete", async (req, res) => {
+  const id = req.body.id;
+
+  try {
+    await Task.findByIdAndDelete(id);
+    res.status(200).json("Task has been deleted...");
   } catch (error) {
     res.status(500).json(error);
   }
