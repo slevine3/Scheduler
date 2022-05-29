@@ -8,10 +8,14 @@ const path = require("path");
 dotenv.config();
 app.use(cors());
 app.use(express.json());
-const axios = require("axios");
-const Mailer = require("./modules/Mailer");
+
 const graph = require('./modules/graph')
-graph()
+// graph()
+
+
+const RunTask = require('./modules/RunTask')
+// RunTask()
+
 
 const taskRoute = require("./routes/tasks");
 

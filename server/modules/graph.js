@@ -3,6 +3,7 @@ const myChart = new QuickChart();
 const axios = require("axios");
 const Mailer = require("./Mailer");
 
+
 const graph = async () => {
   try {
     const response = await axios.get(
@@ -23,7 +24,7 @@ const graph = async () => {
           datasets: [
             {
               label: "Temperature",
-              data: temp,
+              data: temp, fill: false,
             },
           ],
         },
@@ -33,8 +34,8 @@ const graph = async () => {
       .setBackgroundColor("transparent");
 
     const chartImageUrl = myChart.getUrl();
-
     const message = chartImageUrl;
+
     Mailer(message);
   } catch (error) {
     console.log(error);

@@ -1,27 +1,26 @@
-const Mailer = require("./Mailer");
 const moment = require("moment");
+const Task = require("../models/Task");
+const graph = require("./graph");
 
+//CHECK FOR TASKS
 
-//Check FOR TASKS
-//Need to figure out how to run on correct time
 const RunTask = async () => {
-  const time = "2022-05-28T20:44:00+03:00";
-  if (time === 1) {
-    console.log("WTF");
-  } else {
-    const now = moment().format();
+  const now = moment().format();
 
-    try {
-      const data = await Task.find({
-        value: {
-          $eq: now,
-        },
-      });
-      Mailer();
-      console.log("data is called: ", data);
-    } catch (error) {
-      console.log(error);
+  try {
+    const data = await Task.find({
+      value: {
+        $gte: now,
+      },
+    });
+    if (data.length > 0) {
+      graph() //This calls an api which generates a graph and then sends an email
+      RunTask() //Recursive attempt to call the function for the next task
+    } else {
+      RunTask() // If data array is empty it will call the function until data has value
     }
+  } catch (error) {
+    console.log(error);
   }
 };
 
