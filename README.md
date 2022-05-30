@@ -1,9 +1,7 @@
 # Scheduler
 
-## Front End
-### React with Material UI
+## Front End built using React with Material UI
 
-## Back End
-## NodeJS with Express.js and MongoDB
+## Back End built using NodeJS and MongoDB 
 
-## Scheduling and Graphing System with Moment.js, Moment-timezone, Nodemailer, Quickchart.js
+## Scheduling and Graphing System built using Moment.js, Moment-timezone, Nodemailer, Quickchart.js
