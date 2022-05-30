@@ -29,7 +29,7 @@ const graph = async (item) => {
           labels: time,
           datasets: [
             {
-              label: "Temperature",
+              label: `Temperature for ${newDate}`,
               data: temp,
               fill: false,
             },

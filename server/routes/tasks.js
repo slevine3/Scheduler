@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const Task = require("../models/Task");
-const moment = require('moment-timezone')
+const moment = require("moment-timezone");
 
 //CREATE
 router.post("/", async (req, res) => {
@@ -9,7 +9,7 @@ router.post("/", async (req, res) => {
   const subject = req.body.subject;
   const body = req.body.body;
 
-  //CORRECT NODE TIMESTAMP ISSUE +3hrs
+  //CORRECT THE NODEJS TIMESTAMP ISSUE +3hrs
   let israelTimezone = moment.tz(wrongValue, "Asia/Jerusalem");
   let value = israelTimezone.format();
 
@@ -51,11 +51,19 @@ router.get("/daily", async (req, res) => {
 
 router.put("/update", async (req, res) => {
   const id = req.body.id;
+  const wrongValue = req.body.value;
+  const email = req.body.email;
+  const subject = req.body.subject;
+  const body = req.body.body;
+  //CORRECT THE NODEJS TIMESTAMP ISSUE +3hrs
+  let israelTimezone = moment.tz(wrongValue, "Asia/Jerusalem");
+  let value = israelTimezone.format();
+
   try {
     const updateTask = await Task.findByIdAndUpdate(
       id,
       {
-        $set: req.body,
+        $set: { value, email, subject, body },
       },
       { new: true }
     );
