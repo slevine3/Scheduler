@@ -2,12 +2,14 @@ const Mailer = (message, item) => {
   const nodemailer = require("nodemailer");
 
   //MESSAGE OPTIONS
-
+  console.log("item.email: ", item.email);
   let mailOptions = {
     from: "sasa_software_demo@yahoo.com",
     to: item.email,
     subject: item.subject,
-    text: item.body + ". Additionally, please see the attachment for yesterday's 24 hour weather temperatures",
+    text:
+      item.body +
+      ". Additionally, please see the attachment for yesterday's 24 hour weather temperatures",
     attachments: [
       {
         filename: "weather.jpg",
