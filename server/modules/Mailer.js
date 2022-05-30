@@ -4,7 +4,7 @@ const Mailer = (message, item) => {
   //MESSAGE OPTIONS
 
   let mailOptions = {
-    from: "levinesam3@gmail.com",
+    from: "sasa_software_demo@yahoo.com",
     to: item.email,
     subject: item.subject,
     text: item.body + ". Additionally, please see the attachment for yesterday's 24 hour weather temperatures",
@@ -18,7 +18,7 @@ const Mailer = (message, item) => {
 
   //TRANSPORT MECHANISM AND CONFIG - DEFAULT SMTP
   let transporter = nodemailer.createTransport({
-    service: "gmail",
+    service: "yahoo",
     auth: {
       user: process.env.USER_EMAIL,
       pass: process.env.EMAIL_PASS,
