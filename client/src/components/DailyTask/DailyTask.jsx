@@ -3,11 +3,23 @@ import axios from "axios";
 import "./DailyTask.css";
 import date from "date-and-time";
 import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
+import moment from "moment";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const DailyTask = () => {
   const [dailyTasks, setDailyTasks] = useState([]);
   const now = new Date();
   const pattern = date.compile("ddd, MMM DD YYYY");
+
+  const [value, setValue] = useState(new Date());
+  const [email, setEmail] = useState(null);
+  const [subject, setSubject] = useState(null);
+  const [body, setBody] = useState(null);
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     const getDailyTasks = async () => {
       try {
@@ -23,21 +35,30 @@ const DailyTask = () => {
     getDailyTasks();
   }, []);
 
-  const handleDelete = async () => {
+  const handleDelete = async (id) => {
     try {
-      const response = await axios.get(
-        "http://localhost:5000/api/tasks/delete"
+      const response = await axios.delete(
+        "http://localhost:5000/api/tasks/delete",
+        {
+          data: {
+            id: id,
+          },
+        }
       );
-      console.log(response);
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }
   };
-
+  const handleEdit = async (item) => {
+    navigate("/edit", { state: { item } });
+  };
   return (
-    <div>
+    <div className="dailyTaskContainer">
       <div>
-        <h1>Daily Tasks: {date.format(now, pattern)} </h1>
+        <h1 className="dailyTaskTitle">
+          Daily Tasks: {date.format(now, pattern)}{" "}
+        </h1>
       </div>
       <div>
         <ul>
@@ -46,7 +67,7 @@ const DailyTask = () => {
               <div key={item._id}>
                 <li className="emailTime">
                   <span className="emailItemTitle">Time:</span>
-                  {item.value}
+                  {moment(item.value).format("LT")}
                 </li>
                 <li className="emailRecipients">
                   <span className="emailItemTitle">Recipient(s):</span>{" "}
@@ -59,11 +80,37 @@ const DailyTask = () => {
                 <li className="emailBody">
                   <span className="emailItemTitle">Body:</span>: {item.body}
                 </li>
-                <DeleteIcon className="deleteIcon" onclick={handleDelete} />
+                <div className="taskIcons">
+                  <Button
+                    onClick={() => handleDelete(item._id)}
+                    variant="outlined"
+                    startIcon={<DeleteIcon />}
+                    style={{ marginRight: "30px" }}
+                  >
+                    Delete
+                  </Button>
+                  <Button
+                    onClick={() => handleEdit(item)}
+                    variant="contained"
+                    endIcon={<EditIcon />}
+                  >
+                    Edit
+                  </Button>
+                </div>
               </div>
             ))
           ) : (
-            <h1>No Daily Tasks For Today</h1>
+            <h1
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100px",
+                color: '#1976d2'
+              }}
+            >
+              No Daily Tasks For Today
+            </h1>
           )}
         </ul>
       </div>

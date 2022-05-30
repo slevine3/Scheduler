@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./DatePicker.css";
+import "./RescheduleDatePicker.css";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
@@ -11,7 +11,8 @@ import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 
 import axios from "axios";
 import { Button } from "@mui/material";
-const DatePicker = () => {
+import { useNavigate } from "react-router-dom";
+const RescheduleDatePicker = (id) => {
   const latitude = 32.0853;
   const longitude = 34.7818;
 
@@ -19,25 +20,31 @@ const DatePicker = () => {
   const [email, setEmail] = useState(null);
   const [subject, setSubject] = useState(null);
   const [body, setBody] = useState(null);
+  const navigate = useNavigate();
+  let taskId = id.id;
 
   const handleChange = async (newValue) => {
     setValue(newValue);
   };
 
-  console.log(value);
   const handleClick = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/api/tasks", {
-        value,
-        email,
-        subject,
-        body,
-      });
-      window.location.reload();
+      const response = await axios.put(
+        "http://localhost:5000/api/tasks/update",
+        {
+          id: taskId,
+          value,
+          email,
+          subject,
+          body,
+        }
+      );
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
   };
+
   return (
     <div className="datePickerContainer">
       <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -78,11 +85,11 @@ const DatePicker = () => {
       </div>
       <div>
         <Button onClick={handleClick} variant="contained">
-          Schedule Task
+          ReSchedule Task
         </Button>
       </div>
     </div>
   );
 };
 
-export default DatePicker;
+export default RescheduleDatePicker;

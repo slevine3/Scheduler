@@ -1,13 +1,16 @@
-import logo from "./logo.svg";
-import "./App.css";
-import DatePicker from "./components/DatePicker/DatePicker";
-import DailyTask from "./components/DailyTask/DailyTask";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Home from "./pages/Home/Home";
+import RescheduleTask from "./pages/RescheduleTask/RescheduleTask";
 function App() {
   return (
     <div>
-      <DatePicker />
-      <DailyTask />
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/edit" element={<RescheduleTask />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

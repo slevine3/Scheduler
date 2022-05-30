@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-import "./DatePicker.css";
+import "./EditTask.css";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
-import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
-import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
+
 
 import axios from "axios";
-import { Button } from "@mui/material";
-const DatePicker = () => {
+const EditTask = () => {
+
   const latitude = 32.0853;
   const longitude = 34.7818;
 
@@ -24,6 +22,7 @@ const DatePicker = () => {
     setValue(newValue);
   };
 
+  
   console.log(value);
   const handleClick = async () => {
     try {
@@ -51,38 +50,24 @@ const DatePicker = () => {
         </Stack>
       </LocalizationProvider>
 
-      <div className="datePickerInputs">
-        <input
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-          type="email"
-          className="datePickerEmail"
-        ></input>
+      <div>
+        <label>Email</label>
+        <input onChange={(e) => setEmail(e.target.value)} type="email"></input>
       </div>
 
       <div>
-        <input
-          placeholder="Subject"
-          onChange={(e) => setSubject(e.target.value)}
-          type="text"
-          className="datePickerSubject"
-        ></input>
+        <label>Subject</label>
+        <input onChange={(e) => setSubject(e.target.value)} type="text"></input>
       </div>
       <div>
-        <textarea
-          style={{ maxWidth: "100%" }}
-          placeholder="Body"
-          onChange={(e) => setBody(e.target.value)}
-          className="datePickerBody"
-        ></textarea>
+        <label>Body</label>
+        <textarea onChange={(e) => setBody(e.target.value)}></textarea>
       </div>
       <div>
-        <Button onClick={handleClick} variant="contained">
-          Schedule Task
-        </Button>
+        <button onClick={handleClick}>Edit This Task</button>
       </div>
     </div>
   );
 };
 
-export default DatePicker;
+export default EditTask;
