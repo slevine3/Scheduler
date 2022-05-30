@@ -46,7 +46,7 @@ const RescheduleDatePicker = (id) => {
   };
 
   return (
-    <div className="datePickerContainer">
+    <div className="rescheduleDatePickerContainer">
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <Stack spacing={3}>
           <DateTimePicker

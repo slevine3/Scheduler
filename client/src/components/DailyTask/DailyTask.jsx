@@ -60,8 +60,8 @@ const DailyTask = () => {
           Daily Tasks: {date.format(now, pattern)}{" "}
         </h1>
       </div>
-      <div>
-        <ul>
+      <div className="emailContainer">
+        <ul >
           {dailyTasks.length > 0 ? (
             dailyTasks.map((item) => (
               <div key={item._id}>

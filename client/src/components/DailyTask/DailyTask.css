@@ -10,21 +10,26 @@
 
 .emailTime {
   font-size: 24px;
+  margin-bottom: 20px;
 }
 .emailItemTitle {
   font-weight: 600;
+  margin-bottom: 20px;
 }
 .emailRecipients {
   font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .emailSubject {
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .emailBody {
   font-size: 16px;
+  margin-bottom: 20px;
 }
 
 ul {
