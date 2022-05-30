@@ -4,16 +4,13 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { TimePicker } from "@mui/x-date-pickers/TimePicker";
+
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
-import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
-import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 
 import axios from "axios";
 import { Button } from "@mui/material";
 const DatePicker = () => {
-  const latitude = 32.0853;
-  const longitude = 34.7818;
+
 
   const [value, setValue] = useState(new Date());
   const [email, setEmail] = useState(null);
@@ -70,7 +67,6 @@ const DatePicker = () => {
       </div>
       <div>
         <textarea
-          style={{ maxWidth: "100%" }}
           placeholder="Body"
           onChange={(e) => setBody(e.target.value)}
           className="datePickerBody"

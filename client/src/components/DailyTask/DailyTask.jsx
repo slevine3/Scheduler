@@ -13,11 +13,6 @@ const DailyTask = () => {
   const now = new Date();
   const pattern = date.compile("ddd, MMM DD YYYY");
 
-  const [value, setValue] = useState(new Date());
-  const [email, setEmail] = useState(null);
-  const [subject, setSubject] = useState(null);
-  const [body, setBody] = useState(null);
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -61,12 +56,12 @@ const DailyTask = () => {
         </h1>
       </div>
       <div className="emailContainer">
-        <ul >
+        <ul>
           {dailyTasks.length > 0 ? (
             dailyTasks.map((item) => (
               <div key={item._id}>
                 <li className="emailTime">
-                  <span className="emailItemTitle">Time:</span>
+                  <span className="emailItemTitle">Time: </span>
                   {moment(item.value).format("LT")}
                 </li>
                 <li className="emailRecipients">
@@ -106,7 +101,7 @@ const DailyTask = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 height: "100px",
-                color: '#1976d2'
+                color: "#1976d2",
               }}
             >
               No Daily Tasks For Today

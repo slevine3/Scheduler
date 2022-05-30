@@ -15,21 +15,29 @@
 .emailItemTitle {
   font-weight: 600;
   margin-bottom: 20px;
+  word-wrap: break-word;
 }
+
 .emailRecipients {
   font-size: 20px;
   margin-bottom: 20px;
+  padding-right: 30px;
+  word-wrap: break-word;
 }
 
 .emailSubject {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
+  padding-right: 30px;
+  word-wrap: break-word;
 }
 
 .emailBody {
   font-size: 16px;
   margin-bottom: 20px;
+  word-wrap: break-word;
+  padding-right: 30px;
 }
 
 ul {
