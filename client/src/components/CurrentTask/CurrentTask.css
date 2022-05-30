@@ -1,0 +1,19 @@
+.currentTaskContainer {
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  width: 300px;
+}
+.currentTaskDetail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.currentTaskIcon {
+  margin: 0px 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .currentTaskContainer {
+    margin-bottom: 50px;
+  }
+}

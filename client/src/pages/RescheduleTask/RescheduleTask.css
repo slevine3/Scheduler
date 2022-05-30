@@ -1,26 +1,28 @@
-.editNavBar {
+.rescheduleTaskContainer {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.editBackIcon {
-  cursor: pointer;
-}
-.editTitle {
-  margin-right: 500px;
+  justify-content: space-evenly;
+  margin-top: 30px;
 }
 
-.editContainer {
+.editNavBar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.editCurrentTask {
-  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-  width: 300px;
-}
-.editTaskDetail {
+.editBackIcon {
+  cursor: pointer;
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
+}
+.editTitle {
+  margin-left: 150px;
+}
+
+@media screen and (max-width: 500px) {
+  .rescheduleTaskContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import DailyTask from "../../components/DailyTask/DailyTask";
 import DatePicker from "../../components/DatePicker/DatePicker";
-
+import "./Home.css";
 const Home = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "space-evenly",  }}>
+    <div className="homeContainer">
       <DatePicker />
       <DailyTask />
     </div>
