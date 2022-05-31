@@ -1,7 +1,12 @@
 # Scheduler
 
-## Front End built using React with Material UI
+## Front End: React with Material UI
+### Log Rocket for client side logging
 
-## Back End built using NodeJS and MongoDB 
 
-## Scheduling and Graphing System built using Moment.js, Moment-timezone, Nodemailer, Quickchart.js
+## Back End: NodeJS and MongoDB
+## Winston and Winston-MongoDB for server side logging and connection to database
+
+## Scheduling and Graphing System: Moment.js, Moment-timezone, Nodemailer, Quickchart.js
+
+
