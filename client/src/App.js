@@ -1,18 +1,27 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import Navbar from "./components/Navbar/Navbar";
+import React, { Component } from "react";
 import Home from "./pages/Home/Home";
 import RescheduleTask from "./pages/RescheduleTask/RescheduleTask";
-function App() {
-  return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/edit" element={<RescheduleTask />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+import LogRocket from "logrocket";
+
+class App extends Component {
+  componentWillMount() {
+    LogRocket.init(process.env.REACT_APP_LOG_ROCKET);
+  }
+  render() {
+    return (
+      <div>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/edit" element={<RescheduleTask />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
 
 export default App;

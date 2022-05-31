@@ -1,0 +1,10 @@
+.navbarContainer {
+  height: 100px;
+  background-color: #0a3d63;
+  position: sticky;
+  display: flex;
+  align-items: center;
+}
+.navbarLogo {
+  margin-left: 50px;
+}

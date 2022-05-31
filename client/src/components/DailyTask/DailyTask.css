@@ -3,12 +3,19 @@
   margin-top: 30px;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-  padding-right: 40px;
+}
+.dailyTaskTitleContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 .dailyTaskTitle {
   text-align: center;
 }
-
+.emailContainer {
+  padding-right: 40px;
+}
 .emailTime {
   font-size: 24px;
   margin-bottom: 20px;
@@ -54,5 +61,8 @@ ul {
 @media screen and (max-width: 500px) {
   .dailyTaskContainer {
     width: 90vw;
+  }
+  .dailyTaskTitle {
+    font-size: 20px;
   }
 }

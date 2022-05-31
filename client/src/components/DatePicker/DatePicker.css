@@ -1,5 +1,4 @@
 .datePickerContainer {
-
   width: 250px;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
@@ -10,13 +9,16 @@
   margin-top: 30px;
   height: 375px;
   max-height: 375px;
-
 }
 
 .datePickerInputs {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
+
+
 .datePickerEmail {
   margin: 20px 0px;
   width: 200px;
