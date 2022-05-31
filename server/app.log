@@ -1,0 +1,642 @@
+{"level":"error","message":"error"}
+{"level":"warn","message":"warn"}
+{"level":"info","message":"info"}
+{"level":"verbose","message":"verbose"}
+{"level":"debug","message":"debug"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"error"}
+{"level":"warn","message":"warn"}
+{"level":"info","message":"info"}
+{"level":"verbose","message":"verbose"}
+{"level":"debug","message":"debug"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"error"}
+{"level":"warn","message":"warn"}
+{"level":"info","message":"info"}
+{"level":"verbose","message":"verbose"}
+{"level":"debug","message":"debug"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"error"}
+{"level":"warn","message":"warn"}
+{"level":"info","message":"info"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"error"}
+{"level":"warn","message":"warn"}
+{"level":"info","message":"info"}
+{"level":"info","message":"Server is running on port 5000"}
+error - error
+warn - warn
+info - info
+info - Server is running on port 5000
+error - error
+warn - warn
+info - info
+info - Server is running on port 5000
+[error - error
+[warn - warn
+[info - info
+[info - Server is running on port 5000
+[error] - error
+[warn] - warn
+[info] - info
+[info] - Server is running on port 5000
+[error  ] - error
+[warn   ] - warn
+[info   ] - info
+[info   ] - Server is running on port 5000
+[ERROR] - error
+[WARN] - warn
+[INFO] - info
+[INFO] - Server is running on port 5000
+[ERROR  ] - error
+[WARN   ] - warn
+[INFO   ] - info
+[INFO   ] - Server is running on port 5000
+[ERROR  ] - error
+[WARN   ] - warn
+[INFO   ] - info
+[INFO   ] - Server is running on port 5000
+[ERROR  ] - error
+[WARN   ] - warn
+[INFO   ] - info
+[INFO   ] - Server is running on port 5000
+[ERROR  ] - error
+[WARN   ] - warn
+[INFO   ] - info
+[INFO   ] - Server is running on port 5000
+[ERROR  ] - error
+[WARN   ] - warn
+[INFO   ] - info
+[INFO   ] - Server is running on port 5000
+[ERROR  ] - error
+[WARN   ] - warn
+[INFO   ] - info
+[INFO   ] - Server is running on port 5000
+[ERROR  ] - error
+[WARN   ] - warn
+[INFO   ] - info
+[INFO   ] - Server is running on port 5000
+2022-05-31T11:28:12.497Z - [ERROR  ] - error
+2022-05-31T11:28:12.498Z - [WARN   ] - warn
+2022-05-31T11:28:12.498Z - [INFO   ] - info
+2022-05-31T11:28:12.614Z - [INFO   ] - Server is running on port 5000
+2022-05-31T11:28:13.420Z - [ERROR  ] - error
+2022-05-31T11:28:13.421Z - [WARN   ] - warn
+2022-05-31T11:28:13.422Z - [INFO   ] - info
+2022-05-31T11:28:13.540Z - [INFO   ] - Server is running on port 5000
+2022-05-31T11:28:17.758Z - [ERROR  ] - error
+2022-05-31T11:28:17.762Z - [WARN   ] - warn
+2022-05-31T11:28:17.762Z - [INFO   ] - info
+2022-05-31T11:28:17.911Z - [INFO   ] - Server is running on port 5000
+2022-05-31T11:29:24.839Z - [ERROR  ] - error
+2022-05-31T11:29:24.840Z - [WARN   ] - warn
+2022-05-31T11:29:24.840Z - [INFO   ] - info
+2022-05-31T11:29:24.911Z - [INFO   ] - Server is running on port 5000
+2022-05-31T11:29:47.385Z - [ERROR  ] - error
+2022-05-31T11:29:47.388Z - [WARN   ] - warn
+2022-05-31T11:29:47.388Z - [INFO   ] - info
+2022-05-31T11:29:47.525Z - [INFO   ] - Server is running on port 5000
+2022-05-31T11:33:34.638Z - [ERROR  ] - error
+2022-05-31T11:33:34.640Z - [WARN   ] - warn
+2022-05-31T11:33:34.640Z - [INFO   ] - info
+2022-05-31T11:33:34.754Z - [INFO   ] - Server is running on port 5000
+2022-05-31T11:33:40.899Z - [ERROR  ] - error
+2022-05-31T11:33:40.900Z - [WARN   ] - warn
+2022-05-31T11:33:40.900Z - [INFO   ] - info
+2022-05-31T11:33:40.968Z - [INFO   ] - Server is running on port 5000
+2022-05-31T11:33:47.494Z - [ERROR  ] - error
+2022-05-31T11:33:47.495Z - [WARN   ] - warn
+2022-05-31T11:33:47.495Z - [INFO   ] - info
+2022-05-31T11:33:47.564Z - [INFO   ] - Server is running on port 5000
+2022-05-31T11:33:53.923Z - [ERROR  ] - error
+2022-05-31T11:33:53.925Z - [WARN   ] - warn
+2022-05-31T11:33:53.925Z - [INFO   ] - info
+2022-05-31T11:33:54.047Z - [INFO   ] - Server is running on port 5000
+2022-05-31T11:33:57.083Z - [ERROR  ] - error
+2022-05-31T11:33:57.084Z - [WARN   ] - warn
+2022-05-31T11:33:57.084Z - [INFO   ] - info
+2022-05-31T11:33:57.155Z - [INFO   ] - Server is running on port 5000
+2022-05-31T11:34:30.841Z - [ERROR  ] - error
+2022-05-31T11:34:30.842Z - [WARN   ] - warn
+2022-05-31T11:34:30.843Z - [INFO   ] - info
+2022-05-31T11:34:30.913Z - [INFO   ] - Server is running on port 5000
+2022-05-31T11:34:43.838Z - [ERROR  ] - error
+2022-05-31T11:34:43.839Z - [WARN   ] - warn
+2022-05-31T11:34:43.840Z - [INFO   ] - info
+2022-05-31T11:34:43.908Z - [INFO   ] - Server is running on port 5000
+2022-05-31T11:34:54.677Z - [ERROR  ] - error
+2022-05-31T11:34:54.678Z - [WARN   ] - warn
+2022-05-31T11:34:54.678Z - [INFO   ] - info
+2022-05-31T11:34:54.750Z - [INFO   ] - Server is running on port 5000
+2022-05-31T11:35:06.014Z - [ERROR  ] - error
+2022-05-31T11:35:06.015Z - [WARN   ] - warn
+2022-05-31T11:35:06.016Z - [INFO   ] - info
+2022-05-31T11:35:06.087Z - [INFO   ] - Server is running on port 5000
+2022-05-31T11:35:22.956Z - [ERROR  ] - error
+2022-05-31T11:35:22.958Z - [WARN   ] - warn
+2022-05-31T11:35:22.958Z - [INFO   ] - info
+2022-05-31T11:35:23.056Z - [INFO   ] - Server is running on port 5000
+formatFn => {
+  if (formatFn.length > 2) {
+    throw new InvalidFormatError(formatFn);
+  }
+
+  /*
+   * function Format (options)
+   * Base prototype which calls a `_format`
+   * function and pushes the result.
+   */
+  function Format(options = {}) {
+    this.options = options;
+  }
+
+  Format.prototype.transform = formatFn;
+
+  //
+  // Create a function which returns new instances of
+  // FormatWrap for simple syntax like:
+  //
+  // require('winston').formats.json();
+  //
+  function createFormatWrap(opts) {
+    return new Format(opts);
+  }
+
+  //
+  // Expose the FormatWrap through the create function
+  // for testability.
+  //
+  createFormatWrap.Format = Format;
+  return createFormatWrap;
+} - [ERROR  ] - error
+formatFn => {
+  if (formatFn.length > 2) {
+    throw new InvalidFormatError(formatFn);
+  }
+
+  /*
+   * function Format (options)
+   * Base prototype which calls a `_format`
+   * function and pushes the result.
+   */
+  function Format(options = {}) {
+    this.options = options;
+  }
+
+  Format.prototype.transform = formatFn;
+
+  //
+  // Create a function which returns new instances of
+  // FormatWrap for simple syntax like:
+  //
+  // require('winston').formats.json();
+  //
+  function createFormatWrap(opts) {
+    return new Format(opts);
+  }
+
+  //
+  // Expose the FormatWrap through the create function
+  // for testability.
+  //
+  createFormatWrap.Format = Format;
+  return createFormatWrap;
+} - [WARN   ] - warn
+formatFn => {
+  if (formatFn.length > 2) {
+    throw new InvalidFormatError(formatFn);
+  }
+
+  /*
+   * function Format (options)
+   * Base prototype which calls a `_format`
+   * function and pushes the result.
+   */
+  function Format(options = {}) {
+    this.options = options;
+  }
+
+  Format.prototype.transform = formatFn;
+
+  //
+  // Create a function which returns new instances of
+  // FormatWrap for simple syntax like:
+  //
+  // require('winston').formats.json();
+  //
+  function createFormatWrap(opts) {
+    return new Format(opts);
+  }
+
+  //
+  // Expose the FormatWrap through the create function
+  // for testability.
+  //
+  createFormatWrap.Format = Format;
+  return createFormatWrap;
+} - [INFO   ] - info
+formatFn => {
+  if (formatFn.length > 2) {
+    throw new InvalidFormatError(formatFn);
+  }
+
+  /*
+   * function Format (options)
+   * Base prototype which calls a `_format`
+   * function and pushes the result.
+   */
+  function Format(options = {}) {
+    this.options = options;
+  }
+
+  Format.prototype.transform = formatFn;
+
+  //
+  // Create a function which returns new instances of
+  // FormatWrap for simple syntax like:
+  //
+  // require('winston').formats.json();
+  //
+  function createFormatWrap(opts) {
+    return new Format(opts);
+  }
+
+  //
+  // Expose the FormatWrap through the create function
+  // for testability.
+  //
+  createFormatWrap.Format = Format;
+  return createFormatWrap;
+} - [INFO   ] - Server is running on port 5000
+2022-05-31T14:35:34+03:00 - [ERROR  ] - error
+2022-05-31T14:35:34+03:00 - [WARN   ] - warn
+2022-05-31T14:35:34+03:00 - [INFO   ] - info
+2022-05-31T14:35:34+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:35:45+03:00 - [ERROR  ] - error
+2022-05-31T14:35:45+03:00 - [WARN   ] - warn
+2022-05-31T14:35:45+03:00 - [INFO   ] - info
+2022-05-31T14:35:45+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:36:02+03:00 - [ERROR  ] - error
+2022-05-31T14:36:02+03:00 - [WARN   ] - warn
+2022-05-31T14:36:02+03:00 - [INFO   ] - info
+2022-05-31T14:36:02+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:36:07+03:00 - [ERROR  ] - error
+2022-05-31T14:36:07+03:00 - [WARN   ] - warn
+2022-05-31T14:36:07+03:00 - [INFO   ] - info
+2022-05-31T14:36:07+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:36:11+03:00 - [ERROR  ] - error
+2022-05-31T14:36:11+03:00 - [WARN   ] - warn
+2022-05-31T14:36:11+03:00 - [INFO   ] - info
+2022-05-31T14:36:11+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:38:18+03:00 - [ERROR  ] - error
+2022-05-31T14:38:18+03:00 - [WARN   ] - warn
+2022-05-31T14:38:18+03:00 - [INFO   ] - info
+2022-05-31T14:38:18+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:39:28+03:00 - [ERROR  ] - error
+2022-05-31T14:39:28+03:00 - [WARN   ] - warn
+2022-05-31T14:39:28+03:00 - [INFO   ] - info
+2022-05-31T14:39:28+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:42:34+03:00 - [ERROR  ] - error
+2022-05-31T14:42:34+03:00 - [WARN   ] - warn
+2022-05-31T14:42:34+03:00 - [INFO   ] - info
+2022-05-31T14:42:34+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:43:43+03:00 - [ERROR  ] - error
+2022-05-31T14:43:43+03:00 - [WARN   ] - warn
+2022-05-31T14:43:43+03:00 - [INFO   ] - info
+2022-05-31T14:43:43+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:46:42+03:00 - [ERROR  ] - error
+2022-05-31T14:46:42+03:00 - [WARN   ] - warn
+2022-05-31T14:46:42+03:00 - [INFO   ] - info
+2022-05-31T14:46:42+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:46:50+03:00 - [ERROR  ] - error
+2022-05-31T14:46:50+03:00 - [WARN   ] - warn
+2022-05-31T14:46:50+03:00 - [INFO   ] - info
+2022-05-31T14:46:50+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:47:56+03:00 - [ERROR  ] - error
+2022-05-31T14:47:56+03:00 - [WARN   ] - warn
+2022-05-31T14:47:56+03:00 - [INFO   ] - info
+2022-05-31T14:47:56+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:48:01+03:00 - [ERROR  ] - error
+2022-05-31T14:48:01+03:00 - [WARN   ] - warn
+2022-05-31T14:48:01+03:00 - [INFO   ] - info
+2022-05-31T14:48:01+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:48:21+03:00 - [ERROR  ] - error
+2022-05-31T14:48:21+03:00 - [WARN   ] - warn
+2022-05-31T14:48:21+03:00 - [INFO   ] - info
+2022-05-31T14:48:21+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:48:28+03:00 - [ERROR  ] - error
+2022-05-31T14:48:28+03:00 - [WARN   ] - warn
+2022-05-31T14:48:28+03:00 - [INFO   ] - info
+2022-05-31T14:48:28+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:48:47+03:00 - [ERROR  ] - error
+2022-05-31T14:48:47+03:00 - [WARN   ] - warn
+2022-05-31T14:48:47+03:00 - [INFO   ] - info
+2022-05-31T14:48:47+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:49:00+03:00 - [ERROR  ] - error
+2022-05-31T14:49:00+03:00 - [WARN   ] - warn
+2022-05-31T14:49:00+03:00 - [INFO   ] - info
+2022-05-31T14:49:00+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:49:32+03:00 - [ERROR  ] - error
+2022-05-31T14:49:32+03:00 - [WARN   ] - warn
+2022-05-31T14:49:32+03:00 - [INFO   ] - info
+2022-05-31T14:49:32+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:49:43+03:00 - [ERROR  ] - error
+2022-05-31T14:49:43+03:00 - [WARN   ] - warn
+2022-05-31T14:49:43+03:00 - [INFO   ] - info
+2022-05-31T14:49:43+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:53:46+03:00 - [ERROR  ] - error
+2022-05-31T14:53:46+03:00 - [WARN   ] - warn
+2022-05-31T14:53:46+03:00 - [INFO   ] - info
+2022-05-31T14:53:46+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:53:51+03:00 - [ERROR  ] - error
+2022-05-31T14:53:51+03:00 - [WARN   ] - warn
+2022-05-31T14:53:51+03:00 - [INFO   ] - info
+2022-05-31T14:53:51+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:53:58+03:00 - [ERROR  ] - error
+2022-05-31T14:53:58+03:00 - [WARN   ] - warn
+2022-05-31T14:53:58+03:00 - [INFO   ] - info
+2022-05-31T14:53:58+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:54:05+03:00 - [ERROR  ] - error
+2022-05-31T14:54:05+03:00 - [WARN   ] - warn
+2022-05-31T14:54:05+03:00 - [INFO   ] - info
+2022-05-31T14:54:05+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:54:12+03:00 - [ERROR  ] - error
+2022-05-31T14:54:12+03:00 - [WARN   ] - warn
+2022-05-31T14:54:12+03:00 - [INFO   ] - info
+2022-05-31T14:54:12+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:54:52+03:00 - [ERROR  ] - error
+2022-05-31T14:54:52+03:00 - [WARN   ] - warn
+2022-05-31T14:54:52+03:00 - [INFO   ] - info
+2022-05-31T14:54:52+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:54:53+03:00 - [ERROR  ] - error
+2022-05-31T14:54:53+03:00 - [WARN   ] - warn
+2022-05-31T14:54:53+03:00 - [INFO   ] - info
+2022-05-31T14:54:53+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:54:55+03:00 - [ERROR  ] - error
+2022-05-31T14:54:55+03:00 - [WARN   ] - warn
+2022-05-31T14:54:55+03:00 - [INFO   ] - info
+2022-05-31T14:54:55+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:54:56+03:00 - [ERROR  ] - error
+2022-05-31T14:54:56+03:00 - [WARN   ] - warn
+2022-05-31T14:54:56+03:00 - [INFO   ] - info
+2022-05-31T14:54:56+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:54:59+03:00 - [ERROR  ] - error
+2022-05-31T14:54:59+03:00 - [WARN   ] - warn
+2022-05-31T14:54:59+03:00 - [INFO   ] - info
+2022-05-31T14:54:59+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:57:59+03:00 - [ERROR  ] - error
+2022-05-31T14:57:59+03:00 - [WARN   ] - warn
+2022-05-31T14:57:59+03:00 - [INFO   ] - info
+2022-05-31T14:57:59+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:58:03+03:00 - [ERROR  ] - error
+2022-05-31T14:58:03+03:00 - [WARN   ] - warn
+2022-05-31T14:58:03+03:00 - [INFO   ] - info
+2022-05-31T14:58:03+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T14:58:40+03:00 - [ERROR  ] - error
+2022-05-31T14:58:40+03:00 - [WARN   ] - warn
+2022-05-31T14:58:40+03:00 - [INFO   ] - info
+2022-05-31T14:58:40+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:00:03+03:00 - [ERROR  ] - error
+2022-05-31T15:00:03+03:00 - [WARN   ] - warn
+2022-05-31T15:00:03+03:00 - [INFO   ] - info
+2022-05-31T15:00:03+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:00:06+03:00 - [ERROR  ] - error
+2022-05-31T15:00:06+03:00 - [WARN   ] - warn
+2022-05-31T15:00:06+03:00 - [INFO   ] - info
+2022-05-31T15:00:06+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:00:11+03:00 - [ERROR  ] - error
+2022-05-31T15:00:11+03:00 - [WARN   ] - warn
+2022-05-31T15:00:11+03:00 - [INFO   ] - info
+2022-05-31T15:00:11+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:00:14+03:00 - [ERROR  ] - error
+2022-05-31T15:00:14+03:00 - [WARN   ] - warn
+2022-05-31T15:00:14+03:00 - [INFO   ] - info
+2022-05-31T15:00:14+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:00:15+03:00 - [ERROR  ] - error
+2022-05-31T15:00:15+03:00 - [WARN   ] - warn
+2022-05-31T15:00:15+03:00 - [INFO   ] - info
+2022-05-31T15:00:15+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:00:20+03:00 - [ERROR  ] - error
+2022-05-31T15:00:20+03:00 - [WARN   ] - warn
+2022-05-31T15:00:20+03:00 - [INFO   ] - info
+2022-05-31T15:00:20+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:00:23+03:00 - [ERROR  ] - error
+2022-05-31T15:00:23+03:00 - [WARN   ] - warn
+2022-05-31T15:00:23+03:00 - [INFO   ] - info
+2022-05-31T15:00:23+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:00:28+03:00 - [ERROR  ] - error
+2022-05-31T15:00:28+03:00 - [WARN   ] - warn
+2022-05-31T15:00:28+03:00 - [INFO   ] - info
+2022-05-31T15:00:28+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:00:29+03:00 - [ERROR  ] - error
+2022-05-31T15:00:29+03:00 - [WARN   ] - warn
+2022-05-31T15:00:29+03:00 - [INFO   ] - info
+2022-05-31T15:00:29+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:00:42+03:00 - [ERROR  ] - error
+2022-05-31T15:00:42+03:00 - [WARN   ] - warn
+2022-05-31T15:00:42+03:00 - [INFO   ] - info
+2022-05-31T15:00:42+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:02:09+03:00 - [ERROR  ] - error
+2022-05-31T15:02:09+03:00 - [WARN   ] - warn
+2022-05-31T15:02:09+03:00 - [INFO   ] - info
+2022-05-31T15:02:09+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:02:32+03:00 - [ERROR  ] - error
+2022-05-31T15:02:32+03:00 - [WARN   ] - warn
+2022-05-31T15:02:32+03:00 - [INFO   ] - info
+2022-05-31T15:02:32+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:02:52+03:00 - [ERROR  ] - error
+2022-05-31T15:02:52+03:00 - [WARN   ] - warn
+2022-05-31T15:02:52+03:00 - [INFO   ] - info
+2022-05-31T15:02:52+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:02:53+03:00 - [ERROR  ] - error
+2022-05-31T15:02:53+03:00 - [WARN   ] - warn
+2022-05-31T15:02:53+03:00 - [INFO   ] - info
+2022-05-31T15:02:53+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:02:59+03:00 - [ERROR  ] - error
+2022-05-31T15:02:59+03:00 - [WARN   ] - warn
+2022-05-31T15:02:59+03:00 - [INFO   ] - info
+2022-05-31T15:02:59+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:03:37+03:00 - [ERROR  ] - error
+2022-05-31T15:03:37+03:00 - [WARN   ] - warn
+2022-05-31T15:03:37+03:00 - [INFO   ] - info
+2022-05-31T15:03:37+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:06:47+03:00 - [ERROR  ] - error
+2022-05-31T15:06:47+03:00 - [WARN   ] - warn
+2022-05-31T15:06:47+03:00 - [INFO   ] - info
+2022-05-31T15:06:47+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:06:50+03:00 - [ERROR  ] - error
+2022-05-31T15:06:50+03:00 - [WARN   ] - warn
+2022-05-31T15:06:50+03:00 - [INFO   ] - info
+2022-05-31T15:06:50+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:07:04+03:00 - [ERROR  ] - error
+2022-05-31T15:07:04+03:00 - [WARN   ] - warn
+2022-05-31T15:07:04+03:00 - [INFO   ] - info
+2022-05-31T15:07:04+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:07:14+03:00 - [ERROR  ] - error
+2022-05-31T15:07:14+03:00 - [WARN   ] - warn
+2022-05-31T15:07:14+03:00 - [INFO   ] - info
+2022-05-31T15:07:14+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:08:24+03:00 - [ERROR  ] - error
+2022-05-31T15:08:24+03:00 - [WARN   ] - warn
+2022-05-31T15:08:24+03:00 - [INFO   ] - info
+2022-05-31T15:08:24+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:08:40+03:00 - [ERROR  ] - error
+2022-05-31T15:08:40+03:00 - [WARN   ] - warn
+2022-05-31T15:08:40+03:00 - [INFO   ] - info
+2022-05-31T15:08:40+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:08:49+03:00 - [ERROR  ] - error
+2022-05-31T15:08:49+03:00 - [WARN   ] - warn
+2022-05-31T15:08:49+03:00 - [INFO   ] - info
+2022-05-31T15:08:49+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:09:33+03:00 - [ERROR  ] - error
+2022-05-31T15:09:33+03:00 - [WARN   ] - warn
+2022-05-31T15:09:33+03:00 - [INFO   ] - info
+2022-05-31T15:09:33+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:11:06+03:00 - [ERROR  ] - error
+2022-05-31T15:11:06+03:00 - [WARN   ] - warn
+2022-05-31T15:11:06+03:00 - [INFO   ] - info
+2022-05-31T15:11:06+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:12:26+03:00 - [ERROR  ] - error
+2022-05-31T15:12:26+03:00 - [WARN   ] - warn
+2022-05-31T15:12:26+03:00 - [INFO   ] - info
+2022-05-31T15:12:26+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:12:43+03:00 - [ERROR  ] - error
+2022-05-31T15:12:43+03:00 - [WARN   ] - warn
+2022-05-31T15:12:43+03:00 - [INFO   ] - info
+2022-05-31T15:12:43+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:13:27+03:00 - [ERROR  ] - error
+2022-05-31T15:13:27+03:00 - [WARN   ] - warn
+2022-05-31T15:13:27+03:00 - [INFO   ] - info
+2022-05-31T15:13:27+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:13:45+03:00 - [ERROR  ] - error
+2022-05-31T15:13:45+03:00 - [WARN   ] - warn
+2022-05-31T15:13:45+03:00 - [INFO   ] - info
+2022-05-31T15:13:45+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:14:58+03:00 - [ERROR  ] - error
+2022-05-31T15:14:58+03:00 - [WARN   ] - warn
+2022-05-31T15:14:58+03:00 - [INFO   ] - info
+2022-05-31T15:14:58+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:15:06+03:00 - [ERROR  ] - error
+2022-05-31T15:15:06+03:00 - [WARN   ] - warn
+2022-05-31T15:15:06+03:00 - [INFO   ] - info
+2022-05-31T15:15:06+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:15:12+03:00 - [ERROR  ] - error
+2022-05-31T15:15:12+03:00 - [WARN   ] - warn
+2022-05-31T15:15:12+03:00 - [INFO   ] - info
+2022-05-31T15:15:12+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:15:36+03:00 - [ERROR  ] - error
+2022-05-31T15:15:36+03:00 - [WARN   ] - warn
+2022-05-31T15:15:36+03:00 - [INFO   ] - info
+2022-05-31T15:15:36+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:15:38+03:00 - [ERROR  ] - error
+2022-05-31T15:15:38+03:00 - [WARN   ] - warn
+2022-05-31T15:15:38+03:00 - [INFO   ] - info
+2022-05-31T15:15:38+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:15:42+03:00 - [ERROR  ] - error
+2022-05-31T15:15:42+03:00 - [WARN   ] - warn
+2022-05-31T15:15:42+03:00 - [INFO   ] - info
+2022-05-31T15:15:42+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:15:51+03:00 - [ERROR  ] - error
+2022-05-31T15:15:51+03:00 - [WARN   ] - warn
+2022-05-31T15:15:51+03:00 - [INFO   ] - info
+2022-05-31T15:15:51+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:15:54+03:00 - [ERROR  ] - error
+2022-05-31T15:15:54+03:00 - [WARN   ] - warn
+2022-05-31T15:15:54+03:00 - [INFO   ] - info
+2022-05-31T15:15:54+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:15:57+03:00 - [ERROR  ] - error
+2022-05-31T15:15:57+03:00 - [WARN   ] - warn
+2022-05-31T15:15:57+03:00 - [INFO   ] - info
+2022-05-31T15:15:57+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:16:01+03:00 - [ERROR  ] - error
+2022-05-31T15:16:01+03:00 - [WARN   ] - warn
+2022-05-31T15:16:01+03:00 - [INFO   ] - info
+2022-05-31T15:16:01+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:16:15+03:00 - [ERROR  ] - error
+2022-05-31T15:16:15+03:00 - [WARN   ] - warn
+2022-05-31T15:16:15+03:00 - [INFO   ] - info
+2022-05-31T15:16:15+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:16:18+03:00 - [ERROR  ] - error
+2022-05-31T15:16:18+03:00 - [WARN   ] - warn
+2022-05-31T15:16:18+03:00 - [INFO   ] - info
+2022-05-31T15:16:18+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:16:22+03:00 - [ERROR  ] - error
+2022-05-31T15:16:22+03:00 - [WARN   ] - warn
+2022-05-31T15:16:22+03:00 - [INFO   ] - info
+2022-05-31T15:16:22+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:19:58+03:00 - [ERROR  ] - error
+2022-05-31T15:19:58+03:00 - [WARN   ] - warn
+2022-05-31T15:19:58+03:00 - [INFO   ] - info
+2022-05-31T15:19:58+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:20:00+03:00 - [ERROR  ] - error
+2022-05-31T15:20:00+03:00 - [WARN   ] - warn
+2022-05-31T15:20:00+03:00 - [INFO   ] - info
+2022-05-31T15:20:00+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:20:13+03:00 - [ERROR  ] - error
+2022-05-31T15:20:13+03:00 - [WARN   ] - warn
+2022-05-31T15:20:13+03:00 - [INFO   ] - info
+2022-05-31T15:20:13+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:20:18+03:00 - [ERROR  ] - error
+2022-05-31T15:20:18+03:00 - [WARN   ] - warn
+2022-05-31T15:20:18+03:00 - [INFO   ] - info
+2022-05-31T15:20:18+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:21:45+03:00 - [ERROR  ] - error
+2022-05-31T15:21:45+03:00 - [WARN   ] - warn
+2022-05-31T15:21:45+03:00 - [INFO   ] - info
+2022-05-31T15:21:45+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:25:35+03:00 - [ERROR  ] - error
+2022-05-31T15:25:35+03:00 - [WARN   ] - warn
+2022-05-31T15:25:35+03:00 - [INFO   ] - info
+2022-05-31T15:25:35+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:25:39+03:00 - [ERROR  ] - error
+2022-05-31T15:25:39+03:00 - [WARN   ] - warn
+2022-05-31T15:25:39+03:00 - [INFO   ] - info
+2022-05-31T15:25:39+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:27:02+03:00 - [ERROR  ] - error
+2022-05-31T15:27:02+03:00 - [WARN   ] - warn
+2022-05-31T15:27:02+03:00 - [INFO   ] - info
+2022-05-31T15:27:02+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:27:12+03:00 - [ERROR  ] - error
+2022-05-31T15:27:12+03:00 - [WARN   ] - warn
+2022-05-31T15:27:12+03:00 - [INFO   ] - info
+2022-05-31T15:27:12+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:27:21+03:00 - [ERROR  ] - error
+2022-05-31T15:27:21+03:00 - [WARN   ] - warn
+2022-05-31T15:27:21+03:00 - [INFO   ] - info
+2022-05-31T15:27:21+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:27:23+03:00 - [ERROR  ] - error
+2022-05-31T15:27:23+03:00 - [WARN   ] - warn
+2022-05-31T15:27:23+03:00 - [INFO   ] - info
+2022-05-31T15:27:23+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:28:48+03:00 - [ERROR  ] - error
+2022-05-31T15:28:48+03:00 - [WARN   ] - warn
+2022-05-31T15:28:48+03:00 - [INFO   ] - info
+2022-05-31T15:28:48+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:29:52+03:00 - [ERROR  ] - error
+2022-05-31T15:29:52+03:00 - [WARN   ] - warn
+2022-05-31T15:29:52+03:00 - [INFO   ] - info
+2022-05-31T15:29:52+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:32:01+03:00 - [ERROR  ] - error
+2022-05-31T15:32:01+03:00 - [WARN   ] - warn
+2022-05-31T15:32:01+03:00 - [INFO   ] - info
+2022-05-31T15:32:01+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:32:11+03:00 - [ERROR  ] - error
+2022-05-31T15:32:11+03:00 - [WARN   ] - warn
+2022-05-31T15:32:11+03:00 - [INFO   ] - info
+2022-05-31T15:32:11+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:32:34+03:00 - [ERROR  ] - error
+2022-05-31T15:32:34+03:00 - [WARN   ] - warn
+2022-05-31T15:32:34+03:00 - [INFO   ] - info
+2022-05-31T15:32:34+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:32:40+03:00 - [ERROR  ] - error
+2022-05-31T15:32:40+03:00 - [WARN   ] - warn
+2022-05-31T15:32:40+03:00 - [INFO   ] - info
+2022-05-31T15:32:40+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:33:11+03:00 - [ERROR  ] - error
+2022-05-31T15:33:11+03:00 - [WARN   ] - warn
+2022-05-31T15:33:11+03:00 - [INFO   ] - info
+2022-05-31T15:33:11+03:00 - [INFO   ] - Server is running on port 5000
+2022-05-31T15:33:14+03:00 - [ERROR  ] - error
+2022-05-31T15:33:14+03:00 - [WARN   ] - warn
+2022-05-31T15:33:14+03:00 - [INFO   ] - info
+2022-05-31T15:33:14+03:00 - [INFO   ] - Server is running on port 5000
