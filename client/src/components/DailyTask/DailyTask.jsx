@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { axiosInstance } from "../../config";
 
 const DailyTask = () => {
   const [dailyTasks, setDailyTasks] = useState([]);
@@ -22,9 +23,7 @@ const DailyTask = () => {
   useEffect(() => {
     const getDailyTasks = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:5000/api/tasks/daily"
-        );
+        const response = await axiosInstance.get("/tasks/daily");
 
         setDailyTasks(response.data);
       } catch (error) {
@@ -36,14 +35,11 @@ const DailyTask = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(
-        "http://localhost:5000/api/tasks/delete",
-        {
-          data: {
-            id: id,
-          },
-        }
-      );
+      const response = await axiosInstance.delete("/tasks/delete", {
+        data: {
+          id: id,
+        },
+      });
       window.location.reload();
     } catch (error) {
       console.log(error);
@@ -55,7 +51,6 @@ const DailyTask = () => {
   const handleArrowBack = async () => {
     // try {
     //   const response = await axios.get('http://localhost:5000/api/back', {
-        
     //   })
     // } catch (error) {
     //   console.log(error);

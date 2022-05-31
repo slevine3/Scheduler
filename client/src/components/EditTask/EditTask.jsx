@@ -8,6 +8,7 @@ import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 
 
 import axios from "axios";
+import { axiosInstance } from "../../config";
 const EditTask = () => {
 
   const latitude = 32.0853;
@@ -26,7 +27,7 @@ const EditTask = () => {
   console.log(value);
   const handleClick = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/api/tasks", {
+      const response = await axiosInstance.post("api/tasks", {
         value,
         email,
         subject,

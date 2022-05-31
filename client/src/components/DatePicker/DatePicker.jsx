@@ -9,6 +9,7 @@ import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 
 import axios from "axios";
 import { Button } from "@mui/material";
+import { axiosInstance } from "../../config";
 
 const DatePicker = () => {
   const [value, setValue] = useState(new Date());
@@ -30,7 +31,7 @@ const DatePicker = () => {
       setError("Please provide body content");
     } else {
       try {
-        const response = await axios.post("http://localhost:5000/api/tasks", {
+        const response = await axiosInstance.post("/tasks", {
           value,
           email,
           subject,

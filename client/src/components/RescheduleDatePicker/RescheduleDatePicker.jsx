@@ -7,13 +7,11 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 
-
 import axios from "axios";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { axiosInstance } from "../../config";
 const RescheduleDatePicker = (id) => {
-
-
   const [value, setValue] = useState(new Date());
   const [email, setEmail] = useState(null);
   const [subject, setSubject] = useState(null);
@@ -27,16 +25,13 @@ const RescheduleDatePicker = (id) => {
 
   const handleClick = async () => {
     try {
-      const response = await axios.put(
-        "http://localhost:5000/api/tasks/update",
-        {
-          id: taskId,
-          value,
-          email,
-          subject,
-          body,
-        }
-      );
+      const response = await axiosInstance.put("/tasks/update", {
+        id: taskId,
+        value,
+        email,
+        subject,
+        body,
+      });
       navigate("/");
     } catch (error) {
       console.log(error);
