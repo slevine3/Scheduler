@@ -15,7 +15,8 @@
   justify-content: flex-start;
 }
 .editTitle {
-  margin-left: 150px;
+
+  padding-right: 375px;
 }
 
 @media screen and (max-width: 500px) {
@@ -24,5 +25,16 @@
     justify-content: center;
     align-items: center;
   }
-
+  .editNavBar {
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+  .editTitle {
+    margin: 0;
+    padding-left: 100px;
+    padding-right: 0px;
+  }
+  .editBackIcon {
+    padding-left: 20px;
+  }
 }

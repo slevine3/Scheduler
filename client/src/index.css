@@ -1,9 +1,53 @@
 @font-face {
-  font-family: "MyriadPro";
-  src: local("MyriadPro"),
-   url("./fonts/MyriadPro/MYRIADPRO-BOLD.woff") format("truetype");
-
-  }
+  font-family: "MyriadPro1";
+  src: local("MyriadPro1"),
+    url("./fonts/MyriadPro/MYRIADPRO-BOLD.woff") format("truetype");
+}
+@font-face {
+  font-family: "MyriadPro2";
+  src: local("MyriadPro2"),
+    url("./fonts/MyriadPro/MYRIADPRO-BOLDCOND.woff") format("truetype");
+}
+@font-face {
+  font-family: "MyriadPro3";
+  src: local("MyriadPro3"),
+    url("./fonts/MyriadPro/MYRIADPRO-BOLDCONDIT.woff") format("truetype");
+}
+@font-face {
+  font-family: "MyriadPro4";
+  src: local("MyriadPro4"),
+    url("./fonts/MyriadPro/MYRIADPRO-BOLDIT.woff") format("truetype");
+}
+@font-face {
+  font-family: "MyriadPro5";
+  src: local("MyriadPro5"),
+    url("./fonts/MyriadPro/MYRIADPRO-COND.woff") format("truetype");
+}
+@font-face {
+  font-family: "MyriadPro6";
+  src: local("MyriadPro6"),
+    url("./fonts/MyriadPro/MYRIADPRO-CONDIT.woff") format("truetype");
+}
+@font-face {
+  font-family: "MyriadPro7";
+  src: local("MyriadPro7"),
+    url("./fonts/MyriadPro/MyriadPro-Light.woff") format("truetype");
+}
+@font-face {
+  font-family: "MyriadPro8";
+  src: local("MyriadPro8"),
+    url("./fonts/MyriadPro/MYRIADPRO-REGULAR.woff") format("truetype");
+}
+@font-face {
+  font-family: "MyriadPro9";
+  src: local("MyriadPro9"),
+    url("./fonts/MyriadPro/MYRIADPRO-SEMIBOLD.woff") format("truetype");
+}
+@font-face {
+  font-family: "MyriadPro10";
+  src: local("MyriadPro10"),
+    url("./fonts/MyriadPro/MYRIADPRO-SEMIBOLDIT.woff") format("truetype");
+}
 
 body {
   margin: 0;
@@ -12,11 +56,8 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* font-family: 'Urbanist', sans-serif; */
-  font-family: "MyriadPro";
-  
+  font-family: "MyriadPro8", "Urbanist", sans-serif;
 }
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
