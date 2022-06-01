@@ -1,8 +1,10 @@
+const ProductionLogger = require("../ProductionLogger");
+
 const Mailer = (message, item) => {
   const nodemailer = require("nodemailer");
 
   //MESSAGE OPTIONS
-  console.log("item.email: ", item.email);
+
   let mailOptions = {
     from: "sasa_software_demo@yahoo.com",
     to: item.email,
@@ -31,9 +33,9 @@ const Mailer = (message, item) => {
 
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
-      console.log(error);
+      ProductionLogger.error(error);
     } else {
-      console.log("Email sent: " + info.response);
+      ProductionLogger.info("Email sent: " + info.response);
     }
   });
 };

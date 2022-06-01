@@ -21,6 +21,11 @@
     "nodemailer": "^6.7.5",
     "nodemon": "^2.0.16",
     "quickchart-js": "^3.0.1",
-    "vega": "^5.22.1"
+    "vega": "^5.22.1",
+    "winston": "^3.7.2",
+    "winston-mongodb": "^5.0.7"
+  },
+  "engines": {
+    "node": "16.13.2"
   }
 }

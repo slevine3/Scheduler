@@ -1,20 +1,27 @@
-const moment = require("moment");
-const Task = require("../models/Task");
-const graph = require("./graph");
-
 //CHECK FOR TASKS
 
 const RunTask = async () => {
-  const now = moment().format();
+  const moment = require("moment-timezone");
+  const Task = require("../models/Task");
+  const graph = require("./graph");
+  const ProductionLogger = require("../ProductionLogger");
+
+  const now = new Date();
+
+  let israelTimezone = moment.tz(now, "Asia/Jerusalem");
+  const formattedTimezone = israelTimezone.format();
+
 
   try {
     const data = await Task.find({
       value: {
-        $eq: now,
+        $eq: formattedTimezone,
       },
     });
+
     if (data.length > 0) {
-      console.log(data);
+
+
       data.map((item) => graph(item));
 
       setTimeout(() => {
@@ -24,8 +31,8 @@ const RunTask = async () => {
       RunTask();
     }
   } catch (error) {
-    console.log(error);
+    ProductionLogger.error(error);
   }
 };
 
-module.exports = RunTask;
+module.exports = RunTask();
