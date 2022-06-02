@@ -1,10 +1,13 @@
 const ProductionLogger = require("../ProductionLogger");
+const nodemailer = require("nodemailer");
 
-const Mailer = (message, item) => {
-  const nodemailer = require("nodemailer");
   // const cron = require("node-cron");
   // const Bree = require("bree");
 
+
+
+
+const Mailer = (message, item) => {
 
   //MESSAGE OPTIONS
 

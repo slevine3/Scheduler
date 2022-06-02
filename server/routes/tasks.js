@@ -27,21 +27,10 @@ router.post("/", async (req, res) => {
 //GET TASKS
 
 router.get("/once", async (req, res) => {
-  let start = moment()
-    .set({ hour: 0, minute: 0, second: 0, millisecond: 0 })
-    .format();
-  let end = moment()
-    .set({ hour: 23, minute: 59, second: 59, millisecond: 0 })
-    .format();
-
   try {
     const data = await Task.find({
       recurring: {
         $eq: false,
-      },
-      value: {
-        $gte: start,
-        $lt: end,
       },
     });
 
@@ -54,14 +43,13 @@ router.get("/once", async (req, res) => {
 //GET RECURRING TASKS
 
 router.get("/recurring", async (req, res) => {
-
   try {
     const data = await Task.find({
       recurring: {
         $eq: true,
       },
     });
-    
+
     res.status(200).json(data);
   } catch (error) {
     res.status(500).json(error);

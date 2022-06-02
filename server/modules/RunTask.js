@@ -1,10 +1,12 @@
+const moment = require("moment-timezone");
+const Task = require("../models/Task");
+const graph = require("./graph");
+const ProductionLogger = require("../ProductionLogger");
+
 //CHECK FOR TASKS
 
 const RunTask = async () => {
-  const moment = require("moment-timezone");
-  const Task = require("../models/Task");
-  const graph = require("./graph");
-  const ProductionLogger = require("../ProductionLogger");
+
 
   const now = new Date();
 
