@@ -11,7 +11,6 @@ const RunTask = async () => {
   let israelTimezone = moment.tz(now, "Asia/Jerusalem");
   const formattedTimezone = israelTimezone.format();
 
-
   try {
     const data = await Task.find({
       value: {
@@ -20,8 +19,6 @@ const RunTask = async () => {
     });
 
     if (data.length > 0) {
-
-
       data.map((item) => graph(item));
 
       setTimeout(() => {

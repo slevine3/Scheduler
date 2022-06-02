@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import Home from "./pages/Home/Home";
 import RescheduleTask from "./pages/RescheduleTask/RescheduleTask";
 import LogRocket from "logrocket";
+import Schedule from "./pages/Schedule/Schedule";
 
 class App extends Component {
   componentWillMount() {
@@ -16,6 +17,7 @@ class App extends Component {
           <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/schedule" element={<Schedule />} />
             <Route path="/edit" element={<RescheduleTask />} />
           </Routes>
         </BrowserRouter>

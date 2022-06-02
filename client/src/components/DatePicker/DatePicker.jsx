@@ -7,17 +7,26 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 
-import axios from "axios";
-import { Button } from "@mui/material";
+import {
+  Button,
+  Checkbox,
+  FormControlLabel,
+  FormGroup,
+  Switch,
+} from "@mui/material";
 import { axiosInstance } from "../../config";
+import { useNavigate } from "react-router-dom";
 
 const DatePicker = () => {
+  const [recurring, setRecurring] = useState(false);
   const [value, setValue] = useState(new Date());
   const [email, setEmail] = useState(null);
   const [subject, setSubject] = useState(null);
   const [body, setBody] = useState(null);
   const [error, setError] = useState(null);
-
+  const [success, setSuccess] = useState(null);
+  const navigate = useNavigate();
+  console.log(recurring);
   const handleChange = async (newValue) => {
     setValue(newValue);
   };
@@ -32,16 +41,21 @@ const DatePicker = () => {
     } else {
       try {
         const response = await axiosInstance.post("/tasks", {
+          recurring,
           value,
           email,
           subject,
           body,
         });
-        window.location.reload();
+        // window.location.reload()
+        navigate("/schedule");
       } catch (error) {
         console.log(error);
       }
     }
+  };
+  const handleSwitchChange = () => {
+    setRecurring(true);
   };
   return (
     <div className="datePickerContainer">
@@ -91,13 +105,30 @@ const DatePicker = () => {
           variant="standard"
           required
         />
+        <FormGroup>
+          <FormControlLabel
+            control={<Switch />}
+            label="Recurring Daily"
+            onChange={handleSwitchChange}
+            style={{ margin: "0px 0px 20px 0px", textAlign: "center" }}
+          />
+        </FormGroup>
       </div>
-      <div>
-        <Button onClick={handleClick} variant="contained">
+      <div className="datePickerButtonContainer">
+        <Button
+          onClick={handleClick}
+          variant="contained"
+          style={{ marginBottom: "20px" }}
+        >
           Schedule Task
+        </Button>
+
+        <Button onClick={() => navigate("/schedule")} variant="outlined">
+          View Schedule
         </Button>
       </div>
       {<h4 style={{ color: "red", textAlign: "center" }}>{error}</h4>}
+      {<h4 style={{ color: "green", textAlign: "center" }}>{success}</h4>}
     </div>
   );
 };

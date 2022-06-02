@@ -1,11 +1,12 @@
-.homeContainer {
+.scheduleContainer {
   display: flex;
-  justify-content: center;
-
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 @media screen and (max-width: 500px) {
-  .homeContainer {
+  .scheduleContainer {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;

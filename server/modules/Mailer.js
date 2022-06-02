@@ -2,6 +2,9 @@ const ProductionLogger = require("../ProductionLogger");
 
 const Mailer = (message, item) => {
   const nodemailer = require("nodemailer");
+  // const cron = require("node-cron");
+  // const Bree = require("bree");
+
 
   //MESSAGE OPTIONS
 
@@ -10,8 +13,9 @@ const Mailer = (message, item) => {
     to: item.email,
     subject: item.subject,
     text:
+      "MESSAGE: " +
       item.body +
-      ". Additionally, please see the attachment for yesterday's 24 hour weather temperatures",
+      "Please see the attachment for yesterday's 24 hour weather temperatures",
     attachments: [
       {
         filename: "weather.jpg",
@@ -29,15 +33,27 @@ const Mailer = (message, item) => {
     },
   });
 
-  //DELIVERY and SCHEDULING
+  //LOGIC TO DETERMINE IF RECURRING IS TRUE/FALSE
 
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      ProductionLogger.error(error);
-    } else {
-      ProductionLogger.info("Email sent: " + info.response);
-    }
-  });
+  if (item.recurring === false) {
+    //DELIVERY and SCHEDULING
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        ProductionLogger.error(error);
+      } else {
+        ProductionLogger.info("Email sent: " + info.response);
+      }
+    });
+  }
+
+  // if (item.recurring === true) {
+  //   //1. Send out initial transport email - First Cron Job doesn't register; ie Hour 0 doesn't count. Every hour happens after the first hour.
+  //   //2. Need to identify cron jobs by names and interval from stored mongoDB file
+
+  //   recurringJobs(item);
+
+  //   bree.add({ name: item.name, interval: item.interval });
+  // }
 };
 
 module.exports = Mailer;

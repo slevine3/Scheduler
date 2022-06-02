@@ -5,19 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
+    "bree": "^8.0.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "moment": "^2.29.3",
     "moment-timezone": "^0.5.34",
     "mongoose": "^6.3.4",
+    "node-cron": "^3.0.0",
     "nodemailer": "^6.7.5",
     "nodemon": "^2.0.16",
     "quickchart-js": "^3.0.1",
