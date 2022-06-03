@@ -6,14 +6,15 @@
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   padding: 50px 30px 0px 30px;
-  max-height: 475px;
-  margin-top: 20px;
+  height: 660px;
 }
 
 .datePickerInputs {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .datePickerEmail {

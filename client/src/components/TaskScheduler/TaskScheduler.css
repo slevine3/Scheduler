@@ -3,7 +3,7 @@
   margin-top: 30px;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-  text-align: center;
+  
 }
 .dailyTaskTitleContainer {
   display: flex;
@@ -18,10 +18,11 @@
   padding-right: 40px;
 }
 .emailTime {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 20px;
 }
 .emailItemTitle {
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 20px;
   word-wrap: break-word;
@@ -36,7 +37,6 @@
 
 .emailSubject {
   font-size: 18px;
-  font-weight: 600;
   margin-bottom: 20px;
   padding-right: 30px;
   word-wrap: break-word;

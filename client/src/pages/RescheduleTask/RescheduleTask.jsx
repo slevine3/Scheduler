@@ -15,7 +15,7 @@ const RescheduleTask = (item) => {
         <h1 className="editTitle">Edit Task</h1>
       </div>
       <div className="rescheduleTaskContainer">
-        <CurrentTask /> <RescheduleDatePicker id={location.state.item._id} />
+       <RescheduleDatePicker id={location.state.item._id} />
       </div>
     </div>
   );

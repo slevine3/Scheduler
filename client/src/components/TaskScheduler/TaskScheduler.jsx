@@ -52,7 +52,7 @@ const TaskScheduler = () => {
     <div className="dailyTaskContainer">
       <div>
         <div className="dailyTaskTitleContainer">
-          <h1 className="dailyTaskTitle">One-off Task Schedule</h1>
+          <h1 className="dailyTaskTitle">Non-Recurring Schedule</h1>
         </div>
       </div>
       <div>
@@ -63,6 +63,10 @@ const TaskScheduler = () => {
                 <li className="emailTime">
                   <span className="emailItemTitle">Time: </span>
                   {moment(item.value).format("LLLL")}
+                </li>
+                <li className="emailRecipients">
+                  <span className="emailItemTitle">Schedule Name:</span>{" "}
+                  {item.name}
                 </li>
                 <li className="emailRecipients">
                   <span className="emailItemTitle">Recipient(s):</span>{" "}
@@ -95,17 +99,18 @@ const TaskScheduler = () => {
               </div>
             ))
           ) : (
-            <h1
+            <h2
               style={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 height: "100px",
                 color: "#1976d2",
+                margin: 0,
               }}
             >
               No Tasks Scheduled
-            </h1>
+            </h2>
           )}
         </ul>
       </div>

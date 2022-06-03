@@ -9,15 +9,19 @@ import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 
 import axios from "axios";
 import { Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { axiosInstance } from "../../config";
 const RescheduleDatePicker = (id) => {
+  const location = useLocation();
   const [value, setValue] = useState(new Date());
-  const [email, setEmail] = useState(null);
-  const [subject, setSubject] = useState(null);
-  const [body, setBody] = useState(null);
+  const [name, setName] = useState(location.state.item.name);
+  const [email, setEmail] = useState(location.state.item.email);
+  const [subject, setSubject] = useState(location.state.item.subject);
+  const [body, setBody] = useState(location.state.item.body);
   const navigate = useNavigate();
   let taskId = id.id;
+
+
 
   const handleChange = async (newValue) => {
     setValue(newValue);
@@ -27,12 +31,13 @@ const RescheduleDatePicker = (id) => {
     try {
       const response = await axiosInstance.put("/tasks/update", {
         id: taskId,
+        name,
         value,
         email,
         subject,
         body,
       });
-      navigate("/");
+      navigate("/schedule");
     } catch (error) {
       console.log(error);
     }
@@ -41,10 +46,10 @@ const RescheduleDatePicker = (id) => {
   return (
     <div className="rescheduleDatePickerContainer">
       <LocalizationProvider dateAdapter={AdapterDateFns}>
-        <Stack spacing={3}>
+        <Stack spacing={3} style={{ marginBottom: "10px" }}>
           <DateTimePicker
-            label="Date&Time picker"
-            value={value}
+            label="Date & Time picker"
+            defaultValue={location.state.item.value}
             onChange={handleChange}
             renderInput={(params) => <TextField {...params} />}
           />
@@ -52,30 +57,59 @@ const RescheduleDatePicker = (id) => {
       </LocalizationProvider>
 
       <div className="datePickerInputs">
-        <input
-          placeholder="Email"
+        <TextField
+          id="standard-basic"
+          label="Schedule Name"
+          variant="standard"
+          onChange={(e) => setName(e.target.value)}
+          type="text"
+          className="datePickerSubject"
+          InputProps={{ style: { fontSize: 15 } }}
+          defaultValue={location.state.item.name}
+          required
+        />
+      </div>
+      <div className="datePickerInputs">
+        <TextField
+          InputProps={{ style: { fontSize: 15 } }}
+          id="standard-basic"
+          label="Email"
+          variant="standard"
           onChange={(e) => setEmail(e.target.value)}
           type="email"
           className="datePickerEmail"
-        ></input>
+          defaultValue={location.state.item.subject}
+          required
+        />
       </div>
-
-      <div>
-        <input
-          placeholder="Subject"
+      <div className="datePickerInputs">
+        <TextField
+          InputProps={{ style: { fontSize: 15 } }}
+          id="standard-basic"
+          label="Subject"
+          variant="standard"
           onChange={(e) => setSubject(e.target.value)}
           type="text"
           className="datePickerSubject"
-        ></input>
+          defaultValue={location.state.item.subject}
+          required
+        />
       </div>
-      <div>
-        <textarea
-          style={{ maxWidth: "100%" }}
-          placeholder="Body"
+      <div className="datePickerInputs">
+        <TextField
+          InputProps={{ style: { fontSize: 15 } }}
+          id="standard-multiline-static"
+          label="Body"
+          multiline
+          rows={4}
           onChange={(e) => setBody(e.target.value)}
           className="datePickerBody"
-        ></textarea>
+          variant="standard"
+          defaultValue={location.state.item.body}
+          required
+        />
       </div>
+
       <div>
         <Button onClick={handleClick} variant="contained">
           ReSchedule Task
