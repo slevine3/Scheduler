@@ -9,12 +9,21 @@ router.post("/", async (req, res) => {
   const email = req.body.email;
   const subject = req.body.subject;
   const body = req.body.body;
-
-  //CORRECT THE NODEJS TIMESTAMP ISSUE +3hrs
+  const name = req.body.name;
+  const interval = req.body.interval;
+  //CORRECT NODEJS TIMESTAMP ISSUE +3hrs
   let israelTimezone = moment.tz(wrongValue, "Asia/Jerusalem");
   let value = israelTimezone.format();
 
-  const newTask = new Task({ recurring, value, email, subject, body });
+  const newTask = new Task({
+    recurring,
+    value,
+    email,
+    subject,
+    body,
+    name,
+    interval,
+  });
 
   try {
     const savedTask = await newTask.save();
@@ -60,11 +69,14 @@ router.get("/recurring", async (req, res) => {
 
 router.put("/update", async (req, res) => {
   const id = req.body.id;
+  const name = req.body.name;
   const wrongValue = req.body.value;
   const email = req.body.email;
   const subject = req.body.subject;
   const body = req.body.body;
-  //CORRECT THE NODEJS TIMESTAMP ISSUE +3hrs
+  const interval = req.body.interval;
+  console.log(interval)
+  //CORRECT NODEJS TIMESTAMP ISSUE +3hrs
   let israelTimezone = moment.tz(wrongValue, "Asia/Jerusalem");
   let value = israelTimezone.format();
 
@@ -72,7 +84,7 @@ router.put("/update", async (req, res) => {
     const updateTask = await Task.findByIdAndUpdate(
       id,
       {
-        $set: { value, email, subject, body },
+        $set: { value, email, subject, body, name, interval },
       },
       { new: true }
     );
@@ -85,18 +97,6 @@ router.put("/update", async (req, res) => {
 //DELETE
 
 router.delete("/delete", async (req, res) => {
-  const id = req.body.id;
-
-  try {
-    await Task.findByIdAndDelete(id);
-    res.status(200).json("Task has been deleted...");
-  } catch (error) {
-    res.status(500).json(error);
-  }
-});
-//DELETE RECURRING TASK
-
-router.delete("/deleteRecurring", async (req, res) => {
   const id = req.body.id;
 
   try {

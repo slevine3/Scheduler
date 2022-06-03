@@ -1,14 +1,9 @@
 const ProductionLogger = require("../ProductionLogger");
 const nodemailer = require("nodemailer");
+const moment = require("moment-timezone");
+const Task = require("../models/Task");
 
-  // const cron = require("node-cron");
-  // const Bree = require("bree");
-
-
-
-
-const Mailer = (message, item) => {
-
+const Mailer = async (message, item) => {
   //MESSAGE OPTIONS
 
   let mailOptions = {
@@ -39,7 +34,8 @@ const Mailer = (message, item) => {
   //LOGIC TO DETERMINE IF RECURRING IS TRUE/FALSE
 
   if (item.recurring === false) {
-    //DELIVERY and SCHEDULING
+    //DELIVERY EMAIL
+
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
         ProductionLogger.error(error);
@@ -49,14 +45,56 @@ const Mailer = (message, item) => {
     });
   }
 
-  // if (item.recurring === true) {
-  //   //1. Send out initial transport email - First Cron Job doesn't register; ie Hour 0 doesn't count. Every hour happens after the first hour.
-  //   //2. Need to identify cron jobs by names and interval from stored mongoDB file
+  if (item.recurring === true) {
+    //FIRST DELIVER CURRENT TIMESTAMP EMAIL
 
-  //   recurringJobs(item);
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        ProductionLogger.error(error);
+      } else {
+        ProductionLogger.info("Email sent: " + info.response);
+      }
+    });
 
-  //   bree.add({ name: item.name, interval: item.interval });
-  // }
+    const id = item._id;
+    let value = item.value;
+    const email = item.email;
+    const subject = item.subject;
+    const body = item.body;
+    const name = item.name;
+    const interval = item.interval;
+
+    let israelTimezone;
+
+    //ADJUST TIMESTAMP TO REFLECT THE NEXT OCCURRENCE
+
+    if (interval === "hourly") {
+      israelTimezone = moment.tz(value, "Asia/Jerusalem").add(1, "hours");
+      value = israelTimezone.format();
+    } else if (interval === "daily") {
+      israelTimezone = moment.tz(value, "Asia/Jerusalem").add(1, "days");
+      value = israelTimezone.format();
+    } else if (interval === "monthly") {
+      israelTimezone = moment.tz(value, "Asia/Jerusalem").add(1, "months");
+      value = israelTimezone.format();
+    }
+
+    //UPDATE DATABASE TO REFLECT THE NEXT TIMESTAMP VALUE
+
+    try {
+      const updateValue = await Task.findByIdAndUpdate(
+        id,
+        {
+          $set: { value, email, subject, body, name, interval },
+        },
+        { new: true }
+      );
+
+      ProductionLogger.info(updateValue);
+    } catch (error) {
+      ProductionLogger.error(error);
+    }
+  }
 };
 
 module.exports = Mailer;
