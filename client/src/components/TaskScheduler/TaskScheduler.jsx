@@ -11,8 +11,7 @@ import { axiosInstance } from "../../config";
 
 const TaskScheduler = () => {
   const [dailyTasks, setDailyTasks] = useState([]);
-  // const now = new Date();
-  // const pattern = date.compile("ddd, MMM DD YYYY");
+
 
   dailyTasks.sort((a, b) => new Date(a.value) - new Date(b.value));
 

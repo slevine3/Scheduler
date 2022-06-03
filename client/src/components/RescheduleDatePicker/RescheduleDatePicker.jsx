@@ -8,7 +8,13 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 
 import axios from "axios";
-import { Button } from "@mui/material";
+import {
+  Button,
+  FormControlLabel,
+  Radio,
+  RadioGroup,
+  Typography,
+} from "@mui/material";
 import { useLocation, useNavigate } from "react-router-dom";
 import { axiosInstance } from "../../config";
 const RescheduleDatePicker = (id) => {
@@ -18,10 +24,10 @@ const RescheduleDatePicker = (id) => {
   const [email, setEmail] = useState(location.state.item.email);
   const [subject, setSubject] = useState(location.state.item.subject);
   const [body, setBody] = useState(location.state.item.body);
+  const [interval, setInterval] = useState("hourly");
+  const [recurring, setRecurring] = useState(location.state.item.recurring);
   const navigate = useNavigate();
   let taskId = id.id;
-
-
 
   const handleChange = async (newValue) => {
     setValue(newValue);
@@ -36,6 +42,7 @@ const RescheduleDatePicker = (id) => {
         email,
         subject,
         body,
+        interval,
       });
       navigate("/schedule");
     } catch (error) {
@@ -106,10 +113,37 @@ const RescheduleDatePicker = (id) => {
           className="datePickerBody"
           variant="standard"
           defaultValue={location.state.item.body}
+          style={{ marginBottom: "0px" }}
           required
         />
       </div>
-
+      <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+        defaultValue="hourly"
+        onChange={(e) => setInterval(e.target.value)}
+        style={{ display: recurring ? "flex" : "none", marginBottom: "30px" }}
+      >
+        <FormControlLabel
+          disabled={recurring ? false : true}
+          value="hourly"
+          control={<Radio size="small" />}
+          label={<Typography style={{ fontSize: "13px" }}>Hourly</Typography>}
+        />
+        <FormControlLabel
+          disabled={recurring ? false : true}
+          value="daily"
+          control={<Radio size="small" />}
+          label={<Typography style={{ fontSize: "13px" }}>Daily</Typography>}
+        />
+        <FormControlLabel
+          disabled={recurring ? false : true}
+          value="monthly"
+          control={<Radio size="small" />}
+          label={<Typography style={{ fontSize: "13px" }}>Monthly</Typography>}
+        />
+      </RadioGroup>
       <div>
         <Button onClick={handleClick} variant="contained">
           ReSchedule Task

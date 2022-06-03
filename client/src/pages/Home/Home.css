@@ -3,9 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 .footer {
+  margin-top: 10px;
+  font-size: 18px;
   width: 300px;
   word-wrap: break-word;
   text-align: center;
@@ -16,6 +17,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
 }

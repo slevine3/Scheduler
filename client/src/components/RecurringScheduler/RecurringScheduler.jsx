@@ -42,7 +42,7 @@ const RecurringScheduler = () => {
   const handleEdit = async (item) => {
     navigate("/editRecurring", { state: { item } });
   };
-console.log(recurringTasks)
+  console.log(recurringTasks);
   return (
     <div className="dailyTaskContainer">
       <div>
@@ -60,10 +60,12 @@ console.log(recurringTasks)
                   {moment(item.value).format("LLLL")}
                 </li>
                 <li className="emailBody">
-                  <span className="emailItemTitle">Schedule Name:</span> {item.name}
+                  <span className="emailItemTitle">Schedule Name:</span>{" "}
+                  {item.name}
                 </li>
                 <li className="emailBody">
-                  <span className="emailItemTitle">Interval:</span> {item.interval}
+                  <span className="emailItemTitle">Interval:</span>{" "}
+                  {item.interval}
                 </li>
                 <li className="emailRecipients">
                   <span className="emailItemTitle">Recipient(s):</span>{" "}
@@ -76,7 +78,7 @@ console.log(recurringTasks)
                 <li className="emailBody">
                   <span className="emailItemTitle">Body:</span> {item.body}
                 </li>
-              
+
                 <div className="taskIcons">
                   <Button
                     onClick={() => handleDelete(item._id)}
@@ -106,7 +108,7 @@ console.log(recurringTasks)
                 color: "#1976d2",
               }}
             >
-              No Recurring Tasks Scheduled
+              No Tasks Scheduled
             </h2>
           )}
         </ul>

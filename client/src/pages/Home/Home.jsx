@@ -10,7 +10,7 @@ const Home = () => {
       <DatePicker />
 
 
-      <div className="footer"><h4>*** This app is a task scheduler that will send you an email notification. You can set it to send recurring or non-recurring emails that will contain your inputs, along with a graph of the previous day's weather.</h4></div>
+      <div className="footer"><span>This is a task scheduler that will send you an email at a specified date/time. You can set this email to be recurring at an hourly, daily, or monthly cadence. The sent email will contain your inputs, along with a graph of the previous day's weather in Tel Aviv.</span></div>
     </div>
   );
 };

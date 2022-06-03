@@ -6,7 +6,7 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import moment from "moment";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
-
+import { validate } from "react-email-validator";
 import {
   Button,
   Checkbox,
@@ -38,12 +38,22 @@ const DatePicker = () => {
   const handleChange = async (newValue) => {
     setValue(newValue);
   };
+  let timeNow = moment().format();
 
   const handleClick = async () => {
-    if (!name) {
+    //Need to validate timeNow > value logic
+    //Need to correct npm validate for email logic
+
+    if (!timeNow) {
+      setError("Please provide a future date/time");
+    } else if (!name) {
       setError("Please provide a schedule name");
     } else if (!email) {
       setError("Please provide an email address");
+    } else if (validate(email)) {
+      if (false) {
+        setError("Please provide a valid email address");
+      }
     } else if (!subject) {
       setError("Please provide a subject");
     } else if (!body) {

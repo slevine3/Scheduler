@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import RescheduleTask from "./pages/RescheduleTask/RescheduleTask";
 import LogRocket from "logrocket";
 import Schedule from "./pages/Schedule/Schedule";
+import RescheduleRecurring from "./pages/RescheduleRecurring/RescheduleRecurring";
 
 class App extends Component {
   componentWillMount() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/schedule" element={<Schedule />} />
             <Route path="/edit" element={<RescheduleTask />} />
+            <Route path="/editRecurring" element={<RescheduleRecurring />} />
           </Routes>
         </BrowserRouter>
       </div>
