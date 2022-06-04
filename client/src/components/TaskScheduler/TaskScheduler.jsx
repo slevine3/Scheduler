@@ -12,7 +12,6 @@ import { axiosInstance } from "../../config";
 const TaskScheduler = () => {
   const [dailyTasks, setDailyTasks] = useState([]);
 
-
   dailyTasks.sort((a, b) => new Date(a.value) - new Date(b.value));
 
   const navigate = useNavigate();
@@ -51,7 +50,7 @@ const TaskScheduler = () => {
     <div className="dailyTaskContainer">
       <div>
         <div className="dailyTaskTitleContainer">
-          <h1 className="dailyTaskTitle">Non-Recurring Schedule</h1>
+          <h1 className="dailyTaskTitle">Non-Recurring Tasks</h1>
         </div>
       </div>
       <div>
@@ -59,14 +58,15 @@ const TaskScheduler = () => {
           {dailyTasks.length > 0 ? (
             dailyTasks.map((item) => (
               <div key={item._id} className="emailContainer">
-                <li className="emailTime">
-                  <span className="emailItemTitle">Time: </span>
-                  {moment(item.value).format("LLLL")}
-                </li>
                 <li className="emailRecipients">
                   <span className="emailItemTitle">Schedule Name:</span>{" "}
                   {item.name}
                 </li>
+                <li className="emailTime">
+                  <span className="emailItemTitle">Time: </span>
+                  {moment(item.value).format("LLLL")}
+                </li>
+
                 <li className="emailRecipients">
                   <span className="emailItemTitle">Recipient(s):</span>{" "}
                   {item.email}
@@ -98,18 +98,7 @@ const TaskScheduler = () => {
               </div>
             ))
           ) : (
-            <h2
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100px",
-                color: "#1976d2",
-                margin: 0,
-              }}
-            >
-              No Tasks Scheduled
-            </h2>
+            <h2 className="dailyTaskSubtitle">No Tasks Scheduled</h2>
           )}
         </ul>
       </div>

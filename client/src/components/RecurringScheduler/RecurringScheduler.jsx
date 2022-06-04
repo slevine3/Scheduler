@@ -42,12 +42,12 @@ const RecurringScheduler = () => {
   const handleEdit = async (item) => {
     navigate("/editRecurring", { state: { item } });
   };
-  console.log(recurringTasks);
+
   return (
     <div className="dailyTaskContainer">
       <div>
         <div className="dailyTaskTitleContainer">
-          <h1 className="dailyTaskTitle">Recurring Schedule</h1>
+          <h1 className="dailyTaskTitle">Recurring Tasks</h1>
         </div>
       </div>
       <div>
@@ -55,14 +55,15 @@ const RecurringScheduler = () => {
           {recurringTasks.length > 0 ? (
             recurringTasks.map((item) => (
               <div key={item._id} className="emailContainer">
-                <li className="emailTime">
-                  <span className="emailItemTitle">Time: </span>
-                  {moment(item.value).format("LLLL")}
-                </li>
                 <li className="emailBody">
                   <span className="emailItemTitle">Schedule Name:</span>{" "}
                   {item.name}
                 </li>
+                <li className="emailTime">
+                  <span className="emailItemTitle">Time: </span>
+                  {moment(item.value).format("LLLL")}
+                </li>
+
                 <li className="emailBody">
                   <span className="emailItemTitle">Interval:</span>{" "}
                   {item.interval}
@@ -99,17 +100,7 @@ const RecurringScheduler = () => {
               </div>
             ))
           ) : (
-            <h2
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100px",
-                color: "#1976d2",
-              }}
-            >
-              No Tasks Scheduled
-            </h2>
+            <h2 className="dailyTaskSubtitle">No Tasks Scheduled</h2>
           )}
         </ul>
       </div>

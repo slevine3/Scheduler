@@ -53,7 +53,11 @@ const RescheduleDatePicker = (id) => {
   return (
     <div className="rescheduleDatePickerContainer">
       <LocalizationProvider dateAdapter={AdapterDateFns}>
-        <Stack spacing={3} style={{ marginBottom: "10px" }}>
+        <Stack
+          spacing={3}
+          className="datePickerMobile"
+          style={{ marginBottom: "10px" }}
+        >
           <DateTimePicker
             label="Date & Time picker"
             defaultValue={location.state.item.value}
@@ -85,7 +89,7 @@ const RescheduleDatePicker = (id) => {
           onChange={(e) => setEmail(e.target.value)}
           type="email"
           className="datePickerEmail"
-          defaultValue={location.state.item.subject}
+          defaultValue={location.state.item.email}
           required
         />
       </div>

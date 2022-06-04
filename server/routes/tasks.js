@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Task = require("../models/Task");
 const moment = require("moment-timezone");
-
+const ProductionLogger = require("../ProductionLogger");
 //CREATE
 router.post("/", async (req, res) => {
   const recurring = req.body.recurring;
@@ -27,9 +27,10 @@ router.post("/", async (req, res) => {
 
   try {
     const savedTask = await newTask.save();
+
     res.status(200).json(savedTask);
   } catch (error) {
-    res.status(500).json(error);
+    ProductionLogger.error(error);
   }
 });
 
@@ -45,7 +46,7 @@ router.get("/once", async (req, res) => {
 
     res.status(200).json(data);
   } catch (error) {
-    res.status(500).json(error);
+    ProductionLogger.error(error);
   }
 });
 
@@ -61,7 +62,7 @@ router.get("/recurring", async (req, res) => {
 
     res.status(200).json(data);
   } catch (error) {
-    res.status(500).json(error);
+    ProductionLogger.error(error);
   }
 });
 
@@ -75,7 +76,7 @@ router.put("/update", async (req, res) => {
   const subject = req.body.subject;
   const body = req.body.body;
   const interval = req.body.interval;
-  console.log(interval)
+  console.log(interval);
   //CORRECT NODEJS TIMESTAMP ISSUE +3hrs
   let israelTimezone = moment.tz(wrongValue, "Asia/Jerusalem");
   let value = israelTimezone.format();
@@ -90,7 +91,7 @@ router.put("/update", async (req, res) => {
     );
     res.status(200).json(updateTask);
   } catch (error) {
-    res.status(500).json(error);
+    ProductionLogger.error(error);
   }
 });
 
@@ -103,7 +104,7 @@ router.delete("/delete", async (req, res) => {
     await Task.findByIdAndDelete(id);
     res.status(200).json("Task has been deleted...");
   } catch (error) {
-    res.status(500).json(error);
+    ProductionLogger.error(error);
   }
 });
 

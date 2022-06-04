@@ -3,6 +3,14 @@
   justify-content: space-evenly;
   align-items: flex-start;
 }
+.scheduleArrowBackIcon {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-start;
+}
+.scheduleArrowBackIcon {
+  cursor: pointer;
+}
 
 @media screen and (max-width: 500px) {
   .scheduleContainer {

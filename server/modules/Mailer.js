@@ -11,9 +11,8 @@ const Mailer = async (message, item) => {
     to: item.email,
     subject: item.subject,
     text:
-      "MESSAGE: " +
       item.body +
-      "Please see the attachment for yesterday's 24 hour weather temperatures",
+      " AUTOMATED MESSAGE: Please see the attachment for yesterday's 24 hour weather temperatures",
     attachments: [
       {
         filename: "weather.jpg",

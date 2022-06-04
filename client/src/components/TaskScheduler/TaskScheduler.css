@@ -3,7 +3,6 @@
   margin-top: 30px;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-  
 }
 .dailyTaskTitleContainer {
   display: flex;
@@ -18,7 +17,7 @@
   padding-right: 40px;
 }
 .emailTime {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 .emailItemTitle {
@@ -29,7 +28,7 @@
 }
 
 .emailRecipients {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 20px;
   padding-right: 30px;
   word-wrap: break-word;
@@ -43,7 +42,7 @@
 }
 
 .emailBody {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 20px;
   word-wrap: break-word;
   padding-right: 30px;
@@ -52,7 +51,13 @@
 ul {
   list-style: none;
 }
-
+.dailyTaskSubtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: #1976d2;
+}
 .taskIcons {
   margin-bottom: 30px;
   border-bottom: 1px solid lightgray;
@@ -65,5 +70,8 @@ ul {
   }
   .dailyTaskTitle {
     font-size: 20px;
+  }
+  .dailyTaskSubtitle {
+    font-size: 16px;
   }
 }

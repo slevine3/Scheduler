@@ -32,7 +32,6 @@ const DatePicker = () => {
   const [interval, setInterval] = useState("hourly");
 
   const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(null);
 
   const navigate = useNavigate();
 
@@ -41,14 +40,20 @@ const DatePicker = () => {
   };
   let timeNow = moment().format();
   let timeComparison = new Date(timeNow) > new Date(value);
-  let emailValidation = validator.validate(email);
+  let emailSplit = email?.split(",");
+  let emailTrim = emailSplit?.map((item) => item.trim());
+ 
+
+  let emailValidation = emailTrim?.every(
+    (item) => validator.validate(item) === true
+  );
 
   const handleClick = async () => {
     if (timeComparison === true) {
       setError("Please provide a future date/time");
     } else if (!name) {
       setError("Please provide a schedule name");
-    } else if (emailValidation === false) {
+    } else if (emailValidation === false || emailValidation === undefined) {
       setError("Please provide a valid email address");
     } else if (!subject) {
       setError("Please provide a subject");
@@ -83,7 +88,7 @@ const DatePicker = () => {
       <div className="datePickerContainer">
         <div className="datePickerInputs">
           <LocalizationProvider dateAdapter={AdapterDateFns}>
-            <Stack spacing={3}>
+            <Stack spacing={3} className="datePickerMobile">
               <DateTimePicker
                 label="Date & Time picker"
                 value={value}
@@ -195,7 +200,6 @@ const DatePicker = () => {
           </Button>
         </div>
         {<h4 style={{ color: "red", textAlign: "center" }}>{error}</h4>}
-        {<h4 style={{ color: "green", textAlign: "center" }}>{success}</h4>}
       </div>
     </>
   );

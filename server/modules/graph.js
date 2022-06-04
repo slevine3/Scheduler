@@ -29,7 +29,7 @@ const graph = async (item) => {
           labels: time,
           datasets: [
             {
-              label: `Temperature in Tel Aviv on ${titleDate}`,
+              label: `Tel Aviv on ${titleDate} (Temperature in Celsius)`,
               data: temp,
               fill: false,
             },
