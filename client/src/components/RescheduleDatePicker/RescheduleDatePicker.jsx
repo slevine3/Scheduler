@@ -62,6 +62,7 @@ const RescheduleDatePicker = (id) => {
             label="Date & Time picker"
             defaultValue={location.state.item.value}
             onChange={handleChange}
+            value={value}
             renderInput={(params) => <TextField {...params} />}
           />
         </Stack>

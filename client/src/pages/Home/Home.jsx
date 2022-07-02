@@ -6,7 +6,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <div className="homeContainer">
-<div><h1>Task Scheduler</h1></div>
+<div className="homeTitle"><h1>Task Scheduler</h1></div>
       <DatePicker />
 
 

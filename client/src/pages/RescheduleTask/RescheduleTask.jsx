@@ -11,11 +11,13 @@ const RescheduleTask = (item) => {
   return (
     <div>
       <div className="editNavBar">
-        <ArrowBackIcon onClick={() => navigate("/schedule")} className="editBackIcon" />
+        <div className="editBackIcon">
+          <ArrowBackIcon onClick={() => navigate("/schedule")} />
+        </div>
         <h1 className="editTitle">Edit Task</h1>
       </div>
       <div className="rescheduleTaskContainer">
-       <RescheduleDatePicker id={location.state.item._id} />
+        <RescheduleDatePicker id={location.state.item._id} />
       </div>
     </div>
   );

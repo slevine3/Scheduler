@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import React, { Component, useEffect } from "react";
+import React, { useEffect } from "react";
 import Home from "./pages/Home/Home";
 import RescheduleTask from "./pages/RescheduleTask/RescheduleTask";
 import LogRocket from "logrocket";
@@ -15,7 +14,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
+ 
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/schedule" element={<Schedule />} />

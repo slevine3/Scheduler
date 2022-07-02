@@ -45,7 +45,7 @@ const TaskScheduler = () => {
     navigate("/edit", { state: { item } });
   };
 
-  const handleArrowForward = () => {};
+
   return (
     <div className="dailyTaskContainer">
       <div>
