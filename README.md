@@ -5,9 +5,9 @@
 
 
 ## Back End: NodeJS, Express.js, MongoDB
-## Winston and Winston-MongoDB for server side logging and connection to database
+### Winston and Winston-MongoDB for server side logging and connection to database
 
-## Scheduling and Graphing System: Node Cron, Moment.js, Moment-timezone, Nodemailer, Quickchart.js
+### Scheduling and Graphing System: Node Cron, Moment.js, Moment-timezone, Nodemailer, Quickchart.js
 
 ## Cron Job and Nodemailer
 
