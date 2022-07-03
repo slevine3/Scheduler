@@ -1,4 +1,4 @@
-# Scheduler
+# Task Scheduler
 
 ## Front End: React with Material UI
 ### Log Rocket for client side logging
@@ -20,11 +20,11 @@ const Mailer = async (message, item) => {
   //MESSAGE OPTIONS
 
   let mailOptions = {
-    from: "task_scheduler@yahoo.com",
+    from: "task_scheduler@outlook.com",
     to: item.email,
     subject: item.subject,
     text:
-      item.body +de
+      item.body +
       " AUTOMATED MESSAGE: Please see the attachment for yesterday's 24 hour weather temperatures",
     attachments: [
       {
