@@ -6,8 +6,6 @@ const ProductionLogger = require("../ProductionLogger");
 //CHECK FOR TASKS
 
 const RunTask = async () => {
-
-
   const now = new Date();
 
   let israelTimezone = moment.tz(now, "Asia/Jerusalem");

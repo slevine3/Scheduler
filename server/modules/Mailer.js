@@ -7,12 +7,12 @@ const Mailer = async (message, item) => {
   //MESSAGE OPTIONS
 
   let mailOptions = {
-    from: "sasa_software_demo@yahoo.com",
+    from: "task_scheduler@outlook.com",
     to: item.email,
     subject: item.subject,
     text:
       item.body +
-      " AUTOMATED MESSAGE: Please see the attachment for yesterday's 24 hour weather temperatures",
+      " AUTOMATED MESSAGE: Please see the attachment for today's 24 hour weather temperatures",
     attachments: [
       {
         filename: "weather.jpg",
@@ -23,7 +23,8 @@ const Mailer = async (message, item) => {
 
   //TRANSPORT MECHANISM AND CONFIG - DEFAULT SMTP
   let transporter = nodemailer.createTransport({
-    service: "yahoo",
+    host: "smtp-mail.outlook.com",
+    secureConnection: false,
     auth: {
       user: process.env.USER_EMAIL,
       pass: process.env.EMAIL_PASS,

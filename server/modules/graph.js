@@ -2,25 +2,21 @@ const QuickChart = require("quickchart-js");
 const myChart = new QuickChart();
 const axios = require("axios");
 const Mailer = require("./Mailer");
-const moment = require("moment");
 const ProductionLogger = require("../ProductionLogger");
 
 const graph = async (item) => {
-  const value = item.value;
-  const date = moment(value).subtract(1, "days").format();
-  const newDate = date.slice(0, 10);
-  const titleDate = moment(date).format("LL");
+  const units = "metric";
+  const lat = "32.0853";
+  const lon = "34.7818";
+
   try {
     const response = await axios.get(
-      `http://api.weatherapi.com/v1/history.json?key=${process.env.WEATHER_API_KEY}&q=tel_aviv&dt=${newDate}`
+      `http://api.openweathermap.org/data/2.5/forecast?units=${units}&lat=${lat}&lon=${lon}&appid=${process.env.WEATHER_API_KEY}
+      `
     );
 
-    const time = response.data.forecast.forecastday[0].hour.map((item) =>
-      item.time.substring(11)
-    );
-    const temp = response.data.forecast.forecastday[0].hour.map(
-      (item) => item.temp_c
-    );
+    const time = response.data.list.map((item) => item.dt_txt);
+    const temp = response.data.list.map((item) => item.main.temp);
 
     myChart
       .setConfig({
@@ -29,7 +25,7 @@ const graph = async (item) => {
           labels: time,
           datasets: [
             {
-              label: `Tel Aviv on ${titleDate} (Temperature in Celsius)`,
+              label: `Tel Aviv Temperature Forecast (Celsius)`,
               data: temp,
               fill: false,
             },

@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 //CRON SCHEDULE CALLS RUN TASK FUNCTION EVERY MINUTE TO ASSESS
-// WHETHER THERE ARE ANY TASKS THAT NEED TO BE HANDLED
+//WHETHER THERE ARE ANY TASKS THAT NEED TO BE HANDLED
 
 cron.schedule("* * * * *", function () {
   const RunTask = require("./modules/RunTask");
