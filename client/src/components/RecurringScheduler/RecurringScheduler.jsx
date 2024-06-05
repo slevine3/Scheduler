@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import date from "date-and-time";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import moment from "moment";
@@ -34,6 +33,9 @@ const RecurringScheduler = () => {
           id: id,
         },
       });
+      if (!response.ok){
+        throw new Error('Failed to delete task')
+      }
       window.location.reload();
     } catch (error) {
       console.log(error);

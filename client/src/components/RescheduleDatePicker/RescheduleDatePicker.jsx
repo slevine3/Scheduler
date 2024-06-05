@@ -4,10 +4,7 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
-
-import axios from "axios";
 import {
   Button,
   FormControlLabel,
@@ -44,6 +41,9 @@ const RescheduleDatePicker = (id) => {
         body,
         interval,
       });
+      if (!response.ok){
+        throw new Error('Failed to update task')
+      }
       navigate("/schedule");
     } catch (error) {
       console.log(error);

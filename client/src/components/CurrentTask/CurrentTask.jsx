@@ -1,6 +1,6 @@
 import React from "react";
 import "./CurrentTask.css";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import EventIcon from "@mui/icons-material/Event";
 import TitleIcon from "@mui/icons-material/Title";
 import EmailIcon from "@mui/icons-material/Email";

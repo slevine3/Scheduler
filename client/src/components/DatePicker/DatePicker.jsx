@@ -9,11 +9,8 @@ import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 
 import {
   Button,
-  Checkbox,
-  FormControl,
   FormControlLabel,
   FormGroup,
-  FormLabel,
   Radio,
   RadioGroup,
   Switch,
@@ -63,7 +60,7 @@ const DatePicker = () => {
       setError("Please provide a time interval");
     } else {
       try {
-        const response = await axiosInstance.post("/tasks", {
+      const response = await axiosInstance.post("/tasks", {
           recurring,
           value,
           email,
@@ -72,7 +69,9 @@ const DatePicker = () => {
           name,
           interval,
         });
-
+        if (!response.ok){
+          throw new Error('Failed to post task')
+        }
         navigate("/schedule");
       } catch (error) {
         console.log(error);

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import "./TaskScheduler.css";
-import date from "date-and-time";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import moment from "moment";
@@ -36,6 +34,9 @@ const TaskScheduler = () => {
           id: id,
         },
       });
+      if (!response.ok){
+        throw new Error('Failed to delete task')
+      }
       window.location.reload();
     } catch (error) {
       console.log(error);

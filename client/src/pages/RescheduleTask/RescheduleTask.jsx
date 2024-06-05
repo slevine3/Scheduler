@@ -3,7 +3,6 @@ import React from "react";
 import "./RescheduleTask.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import RescheduleDatePicker from "../../components/RescheduleDatePicker/RescheduleDatePicker";
-import CurrentTask from "../../components/CurrentTask/CurrentTask";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 const RescheduleTask = (item) => {
   const location = useLocation();
