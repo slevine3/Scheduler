@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: "npm" # npm for Node.js projects
+    directory: "/client" # Location of the package.json file within the client folder
+    schedule:
+      interval: "daily" # Check for updates daily
+    open-pull-requests-limit: 10 # Maximum number of open pull requests
+    commit-message:
+      prefix: "chore(deps)"
+    rebase-strategy: "auto"
+
+  - package-ecosystem: "npm"
+    directory: "/server" # Location of the package.json file within the server folder
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "chore(deps)"
+    rebase-strategy: "auto"
